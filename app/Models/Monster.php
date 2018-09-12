@@ -19,7 +19,14 @@ class Monster extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = ['address', 'base64_image', 'browse', 'checkbox', 'wysiwyg', 'color', 'color_picker', 'date', 'date_picker', 'start_date', 'end_date', 'datetime', 'datetime_picker', 'email', 'hidden', 'icon_picker', 'image', 'month', 'number', 'float', 'password', 'radio', 'range', 'select', 'select_from_array', 'select2', 'select2_from_ajax', 'select2_from_array', 'simplemde', 'summernote', 'table', 'textarea', 'text', 'tinymce', 'upload', 'upload_multiple', 'url', 'video', 'week', 'extras'];
+    protected $fillable = ['address', 'base64_image', 'browse', 'checkbox',
+        'wysiwyg', 'color', 'color_picker', 'date', 'date_picker',
+        'start_date', 'end_date', 'datetime', 'datetime_picker', 'email',
+        'hidden', 'icon_picker', 'image', 'month', 'number', 'float',
+        'password', 'radio', 'range', 'select', 'select_from_array',
+        'select2', 'select2_from_ajax', 'select2_from_array',
+        'simplemde', 'summernote', 'table', 'textarea', 'text',
+        'tinymce', 'upload', 'upload_multiple', 'url', 'video', 'week', 'extras'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $casts = [
@@ -37,7 +44,7 @@ class Monster extends Model
 
     public function openGoogle($crud = false)
     {
-        return '<a class="btn btn-xs btn-default" target="_blank" href="http://google.com?q='.urlencode($this->text).'" data-toggle="tooltip" title="Just a demo custom button."><i class="fa fa-search"></i> Google it</a>';
+        return '<a class="btn btn-xs btn-default" target="_blank" href="http://google.com?q=' . urlencode($this->text) . '" data-toggle="tooltip" title="Just a demo custom button."><i class="fa fa-search"></i> Google it</a>';
     }
 
     /*
@@ -85,7 +92,7 @@ class Monster extends Model
 
     public function getTextAndEmailAttribute()
     {
-        return $this->text.' '.$this->email;
+        return $this->text . ' ' . $this->email;
     }
 
     /*

@@ -25,7 +25,11 @@ class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         return [
             'name'        => 'required|min:3|max:255',
             'category_id' => 'required',
+            'code_pro' => 'required|unique:products',
             'price'       => 'required|integer',
+            'image'       => 'required',
+            'details'       => 'required',
+            'specification'       => 'required',
         ];
     }
 

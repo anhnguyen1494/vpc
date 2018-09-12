@@ -12,17 +12,17 @@ return [
     */
 
     // Project name. Shown in the breadcrumbs and a few other places.
-    'project_name' => 'Backpack Demo',
+    'project_name' => 'VanPhongCamera',
 
     // Menu logos
-    'logo_lg'   => '<b>Back</b>pack',
-    'logo_mini' => '<b>B</b>p',
+    'logo_lg'   => '<b>VanPhong</b>Camera',
+    'logo_mini' => '<b>VP</b>c',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Cristian Tabacitu',
+    'developer_name' => 'TuấnBra',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => 'https://www.facebook.com/tuanbraa',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => true,
@@ -138,6 +138,4 @@ return [
     | https://www.backpackforlaravel.com
     |
     */
-
-    'license_code' => env('BACKPACK_LICENSE', false),
 ];
