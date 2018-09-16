@@ -17,5 +17,11 @@ class ProductController extends Controller
     public function payment(){
         return view('frontend.pages.payment');
     }
+    public function paymentPost(){
+        return redirect()->route('order.success');
+    }
+    public function orderSuccess(){
+        return view('frontend.pages.payment_success');
+    }
 
 }

@@ -17,4 +17,6 @@ Route::group(['namespace' => 'Frontend'],function(){
     Route::get('gio-hang',['as' => 'product.show', 'uses' => 'ProductController@cart']);
     Route::get('danh-muc/{slug_category}',['as' => 'category', 'uses' => 'CategoryController@index']);
     Route::get('don-hang',['as' => 'payment', 'uses' => 'ProductController@payment']);
+    Route::post('don-hang',['as' => 'payment.post', 'uses' => 'ProductController@paymentPost']);
+    Route::get('dat-hang-thanh-cong',['as' => 'order.success', 'uses' => 'ProductController@orderSuccess']);
 });
