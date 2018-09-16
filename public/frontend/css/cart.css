@@ -1,0 +1,106 @@
+.header {
+    background: #e1e1e1;
+    margin-top: 10px;
+    padding: 7px 10px;
+    border-bottom: 3px solid #4267b2;
+}
+#cart {
+    width: 100%;
+    margin: 10px 0;
+}
+#cart th {
+    background: #4267b2;
+    font-weight: bold;
+    color: #fff;
+}
+#cart th, #cart td {
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid #d0d0d0;
+}
+#cart img.cart_img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+.prd-desc .detail-spinner {
+    display: inline-block;
+    width: 71px;
+    vertical-align: middle;
+}
+.cart_qty.form-control {
+    padding: 3px 18px !important;
+    height: 30px !important;
+}
+.prd-desc .cart_qty {
+    width: 50px;
+    border-radius: 0;
+}
+.detail-spinner .container-detail{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 6px;
+    font-size: 9px;
+    margin-left: -0;
+    position: relative;
+}
+.btn-default {
+    text-shadow: 0 1px 0 #fff;
+    background-image: -webkit-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+    background-image: -o-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0e0));
+    background-image: linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border-color: #dbdbdb;
+    border-color: #ccc;
+}
+.input-group-btn-vertical > .btn:focus,.cart_qty:focus{
+    outline: none;
+    box-shadow: 0 0 0 0 rgba(0,123,255,.25);
+}
+.input-group-btn-vertical .btn {
+    border-radius: 0;
+}
+#cart tr.no-border td {
+    padding: 10px 0;
+    border: none;
+}
+#cart input[type="submit"], #cart input[type="button"] {
+    height: 37px;
+    line-height: 37px;
+    padding: 0 18px;
+    border: 1px solid #d0d0d0;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+#cart input.btn1 {
+    color: #000;
+}
+#cart input.btn2 {
+    background: #4267b2;
+    color: #fff;
+}
+#cart input.btn3 {
+    background: #4267b2;
+    color: #fff;
+}

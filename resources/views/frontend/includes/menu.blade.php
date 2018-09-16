@@ -5,31 +5,31 @@
                 <div class="prd-cate-header">
                     <span>Danh mục sản phẩm<i class="fa fa-chevron-circle-down"></i></span>
                 </div>
-                <ul class="sub-page">
+                <ul class="sub-page" style="{{ !Request::is('/') ? 'display:none' : '' }}">
                     <ul>
                         <li>
-                            <a href="http://fptcamera.vn/camera-tron-bo">
+                            <a href="/danh-muc/camera-tron-bo">
                                 <img alt="Camera trọn bộ"
                                      src="{{ asset('/frontend/images/menu/lap-dat-camera-tron-bo.png') }}">
                                 <span class="mc_title">Camera trọn bộ<i class="fa fa-chevron-right hidden-md"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://fptcamera.vn/camera-tron-bo">
+                            <a href="/danh-muc/camera-tron-bo">
                                 <img alt="Camera giám sát"
                                      src="{{ asset('/frontend/images/menu/camera-giam-sat.png') }}">
                                 <span class="mc_title">Camera giám sát<i class="fa fa-chevron-right hidden-md"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://fptcamera.vn/camera-tron-bo">
+                            <a href="/danh-muc/camera-tron-bo">
                                 <img alt="Đầu ghi hình camera"
                                      src="{{ asset('/frontend/images/menu/dau-ghi-hinh-camera-quan-sat.png') }}">
                                 <span class="mc_title">Đầu ghi hình camera<i class="fa fa-chevron-right hidden-md"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://fptcamera.vn/camera-tron-bo">
+                            <a href="/danh-muc/camera-tron-bo">
                                 <img alt="Phụ kiện camera"
                                      src="{{ asset('/frontend/images/menu/phu-kien-camera.png') }}">
                                 <span class="mc_title">Phụ kiện camera<i class="fa fa-chevron-right hidden-md"></i></span>

@@ -35,7 +35,7 @@
                                     @for($i=1;$i<=6;$i++)
                                         <div class="col-xs-6 col-sm-4 col-lg-3 product-item">
                                             <div class="thumbnail products" style="height: 253px;">
-                                                <a href="#">
+                                                <a href="/san-pham/tron-bo-1-camera-hd-tvi-hikvision">
                                                     <img
                                                             alt="tron-bo-1-camera-hd-tvi-hikvision"
                                                             src="{{ asset('/frontend/images/lap-2-camera-hikvision1.jpg') }}">
