@@ -29,7 +29,7 @@
     vertical-align: middle;
 }
 .cart_qty.form-control {
-    padding: 3px 18px !important;
+    padding: 3px 5px !important;
     height: 30px !important;
 }
 .prd-desc .cart_qty {
@@ -103,4 +103,17 @@
 #cart input.btn3 {
     background: #4267b2;
     color: #fff;
+}
+.destroy-cart{
+    height: 37px;
+    line-height: 37px;
+    padding: 8px 18px;
+    border: 1px solid #d0d0d0;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 10px 5px;
+    color: #000;
 }

@@ -11,28 +11,28 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="http://fptcamera.vn/camera-tron-bo" class="nav-link">
+                        <a href="{{ route('category','camera-tron-bo') }}" class="nav-link">
                             <img alt="Camera trọn bộ"
                                  src="{{ asset('/frontend/images/menu/lap-dat-camera-tron-bo.png') }}">
                             <span class="mc_title">Camera trọn bộ</span>
                         </a>
                     </li>
                     <li  class="nav-item">
-                        <a href="http://fptcamera.vn/camera-tron-bo" class="nav-link">
+                        <a href="{{ route('category','camera-giam-sat') }}" class="nav-link">
                             <img alt="Camera giám sát"
                                  src="{{ asset('/frontend/images/menu/camera-giam-sat.png') }}">
                             <span class="mc_title">Camera giám sát</span>
                         </a>
                     </li>
                     <li  class="nav-item">
-                        <a href="http://fptcamera.vn/camera-tron-bo" class="nav-link">
+                        <a href="{{ route('category','dau-ghi-hinh-camera') }}" class="nav-link">
                             <img alt="Đầu ghi hình camera"
                                  src="{{ asset('/frontend/images/menu/dau-ghi-hinh-camera-quan-sat.png') }}">
                             <span class="mc_title">Đầu ghi hình camera</span>
                         </a>
                     </li>
                     <li  class="nav-item">
-                        <a href="http://fptcamera.vn/camera-tron-bo" class="nav-link">
+                        <a href="{{ route('category','phu-kien-camera') }}" class="nav-link">
                             <img alt="Phụ kiện camera"
                                  src="{{ asset('/frontend/images/menu/phu-kien-camera.png') }}">
                             <span class="mc_title">Phụ kiện camera</span>

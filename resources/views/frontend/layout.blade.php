@@ -44,6 +44,7 @@
     @yield('main')
     @include('frontend.includes.footer')
 </div>
+@include('frontend.includes.contact_right')
 @include ('frontend.includes.partials.params')
 @yield('before_scripts')
 <script src="{{ asset('/frontend/js/jquery-3.2.1.min.js') }}"></script>
@@ -116,6 +117,20 @@
     <script>
         $(document).ready(function () {
             $.notify("{{ session('error') }}", "error");
+        });
+    </script>
+@endif
+@if(session('message'))
+    <script>
+        $(document).ready(function () {
+            $.notify("{{ session('message') }}", "info");
+        });
+    </script>
+@endif
+@if(session('success'))
+    <script>
+        $(document).ready(function () {
+            $.notify("{{ session('success') }}", "success");
         });
     </script>
 @endif

@@ -29,7 +29,7 @@
     vertical-align: middle;
 }
 .cart_qty.form-control {
-    padding: 3px 18px !important;
+    padding: 3px 5px !important;
     height: 30px !important;
 }
 .prd-desc .cart_qty {
@@ -131,4 +131,10 @@
 }
 .order-info-box textarea{
     font-size: 12px;
+}
+.checkbox:hover,.checkbox label:hover{
+    cursor: pointer;
+}
+.info2{
+    display: none;
 }

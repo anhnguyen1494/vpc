@@ -45,7 +45,7 @@ class Product extends Model implements Buyable
 
     public function category()
     {
-        return $this->belongsTo('Backpack\NewsCRUD\app\Models\Category', 'category_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     /*

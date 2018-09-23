@@ -22,48 +22,51 @@
                 </div>
             </div>
         </div>
-        @for($j=1;$j<=4;$j++)
-            <div class="col-xs-12">
-                <div class="titleCategory">
-                    <h4><a href="http://fptcamera.vn/camera-tron-bo">Camera trọn bộ</a></h4>
-                </div>
-                <div class="tab-content ">
-                    <div role="tabpanel" class="tab-pane active" id="dmsp-camera-tron-bo">
-                        <div class="row">
-                            <div class="col-xs-12 col-lg-9">
-                                <div class="row">
-                                    @for($i=1;$i<=6;$i++)
-                                        <div class="col-xs-6 col-sm-4 col-lg-3 product-item">
-                                            <div class="thumbnail products" style="height: 253px;">
-                                                <a href="/san-pham/tron-bo-1-camera-hd-tvi-hikvision">
-                                                    <img
-                                                            alt="tron-bo-1-camera-hd-tvi-hikvision"
-                                                            src="{{ asset('/frontend/images/lap-2-camera-hikvision1.jpg') }}">
-                                                </a>
-                                                <div class="caption">
-                                                    <a href="http://fptcamera.vn/lap-dat-1-camera-hikvision"><h3>Lắp đặt
-                                                            1
-                                                            camera HIKVISION</h3></a>
-                                                    <div class="clear"></div>
-                                                    <span class="new-price">1.999.000 đ</span>
-                                                    <span class="old-price">2.850.000 đ</span>
+        @if(!empty($categories))
+            @foreach($categories as $category)
+                <div class="col-xs-12">
+                    <div class="titleCategory">
+                        <h4><a href="{{ route('category',$category->slug) }}">{{ $category->name }}</a></h4>
+                    </div>
+                    <div class="tab-content ">
+                        <div role="tabpanel" class="tab-pane active" id="dmsp-camera-tron-bo">
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-9">
+                                    <div class="row">
+                                        @if(!empty($category->products))
+                                            @foreach($category->products as $product)
+                                                <div class="col-xs-6 col-sm-4 col-lg-3 product-item">
+                                                    <div class="thumbnail products" style="height: 253px;">
+                                                        <a href="{{ route('product.show', ['id' => $product->id, 'slug_product' => str_slug($product->name)]) }}">
+                                                            <img
+                                                                    alt="{{ $product->name }}"
+                                                                    src="{{ asset($product->image) }}">
+                                                        </a>
+                                                        <div class="caption">
+                                                            <a href="{{ route('product.show', ['id' => $product->id, 'slug_product' => str_slug($product->name)]) }}">
+                                                                <h3>{{ $product->name }}</h3></a>
+                                                            <div class="clear"></div>
+                                                            <span class="new-price">{{ number_format($product->price) }} đ</span>
+                                                            <span class="old-price">{{ number_format($product->price_real) }} đ</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    @endfor
+                                            @endforeach
+                                        @endif
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 hidden-xs hidden-sm" style="padding: 10px 4px;">
-                                <a class="b_a2" href="http://fptcamera.vn/camera-tron-bo"><img
-                                            alt="lap-dat-camera-quan-sat-tron-bo-hd-gia-re1"
-                                            src="{{ asset('/frontend/images/lap-dat-camera-quan-sat-tron-bo-hd-gia-re1.jpg') }}"></a>
+                                <div class="col-md-3 hidden-xs hidden-sm" style="padding: 10px 4px;">
+                                    <a class="b_a2" href="http://fptcamera.vn/camera-tron-bo"><img
+                                                alt="lap-dat-camera-quan-sat-tron-bo-hd-gia-re1"
+                                                src="{{ asset('/frontend/images/lap-dat-camera-quan-sat-tron-bo-hd-gia-re1.jpg') }}"></a>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endfor
+            @endforeach
+        @endif
     </div>
 
     <div class="modal fade" id="supportonlineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
