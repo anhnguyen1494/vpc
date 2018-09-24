@@ -8,6 +8,7 @@ use App\Models\OrderDetail;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 
 class OrderController extends Controller
 {
@@ -19,6 +20,7 @@ class OrderController extends Controller
         Cart::destroy();
 //        dd($order,$order->order_details);
         event(new OrderSuccessEvent($order));
+        Log::alert('Order: '.$order->id.'-'.$order->name1.' đặt hàng thành công');
 //        return redirect()->route('order.success')->with('order',$order);
         return view('frontend.pages.payment_success',compact('order'));
     }

@@ -47,7 +47,7 @@
         @endforeach
         <tr>
             <td colspan="4">Tổng cộng</td>
-            <td style="color:#4267b2;font-weight:bold;">{{ $order->total_price }} VNĐ</td>
+            <td style="color:#4267b2;font-weight:bold;">{{ number_format($order->total_price) }} VNĐ</td>
         </tr>
         </tbody>
     </table>

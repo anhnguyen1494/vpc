@@ -32,6 +32,8 @@ class CreateOrdersTable extends Migration
             $table->string('district2')->nullable();
 
             $table->text('note')->nullable();
+            $table->integer('status')->default(0);
+
             $table->timestamps();
         });
     }

@@ -70,7 +70,7 @@
                             @endif
                             <tr>
                                 <td colspan="5">Tổng cộng</td>
-                                <td style="color:#4267b2;font-weight:bold;">{{ $total_cart }} VNĐ</td>
+                                <td style="color:#4267b2;font-weight:bold;">{{ number_format($total_cart) }} VNĐ</td>
                             </tr>
                             <tr class="no-border">
                                 <td colspan="6">
