@@ -14,7 +14,7 @@
 Route::group(['namespace' => 'Frontend'],function(){
     Route::get('/',['as' => 'home', 'uses' => 'IndexController@index']);
 
-    Route::get('/san-pham/{id}-{slug_product}',['as' => 'product.show', 'uses' => 'ProductController@show']);
+    Route::get('/san-pham/{slug_product}',['as' => 'product.show', 'uses' => 'ProductController@show']);
 
     Route::get('gio-hang',['as' => 'product.cart', 'uses' => 'ProductController@cart']);
     Route::post('addcart',['as' => 'product.addcart', 'uses' => 'ProductController@addCart']);
@@ -28,6 +28,8 @@ Route::group(['namespace' => 'Frontend'],function(){
     Route::get('don-hang',['as' => 'payment', 'uses' => 'ProductController@payment']);
     Route::post('pick',['as' => 'payment.pick_city', 'uses' => 'ProductController@pickCity']);
     Route::post('don-hang',['as' => 'order', 'uses' => 'OrderController@store']);
+
+    Route::post('searchAjax',['as' => 'search-ajax', 'uses' => 'ProductController@searchAjax']);
 
     Route::get('dat-hang-thanh-cong',['as' => 'order.success', 'uses' => 'OrderController@orderSuccess']);
 });

@@ -10,8 +10,8 @@ use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
-    public function show(Request $request, $id,  $slug_product){
-        $product = Product::with('category')->find($id);
+    public function show(Request $request, $slug_product){
+        $product = Product::with('category')->where('slug',$slug_product)->first();
         $cate = $product->category;
         return view('frontend.pages.detail_product',compact('product','cate'));
     }
@@ -26,16 +26,18 @@ class ProductController extends Controller
         $data = $request->except('_token');
         Cart::add($data['id'],$data['name'],$data['qty'],$data['price'],[
             'image' => $data['image'],
+            'slug' => $data['slug'],
             'code_pro' => $data['code_pro']
         ]);
         session()->flash('success','Thêm giỏ hàng thành công');
-        return back();
+        return redirect()->route('product.cart');
     }
 
     public function buyNow(Request $request){
         $data = $request->except('_token');
         Cart::add($data['id'],$data['name'],$data['qty'],$data['price'],[
             'image' => $data['image'],
+            'slug' => $data['slug'],
             'code_pro' => $data['code_pro']
         ]);
         return redirect()->route('payment');
@@ -74,6 +76,9 @@ class ProductController extends Controller
 
         return response()->json(['cities' => $address[$city]['cities']]);
     }
-
-
+    public function searchAjax(Request $request){
+        $keyword = $request->get('keyword');
+        $products = Product::with('category')->where('name','like','%'.$keyword.'%')->get();
+        return response()->json(['message' => $products]);
+    }
 }

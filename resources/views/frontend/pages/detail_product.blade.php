@@ -36,7 +36,7 @@
                             <p>Giá thị trường: <span class="detail-oldprice">{{ number_format($product->price_real) }}
                                     đ</span></p>
                             <p>Giá bán: <span class="detail-price">{{ number_format($product->price) }} đ</span></p>
-                            <p>Tình trạng: <span class="detail-stock">{{ $product->status == 1 ? 'Còn' : 'Hết' }}
+                            <p>Tình trạng: <span class="detail-stock">{{ $product->status == 0 ? 'Còn' : 'Hết' }}
                                     hàng</span></p>
                             <p>Bảo hành: <span class="detail-stock">{{ $product->guarantee }} Tháng</span></p>
                             <div class="clear"></div>
@@ -50,6 +50,8 @@
                                 <input type="hidden" name="price" value="{{$product->price}}">
 
                                 <input type="hidden" name="code_pro" value="{{ $product->code_pro }}">
+
+                                <input type="hidden" name="slug" value="{{ $product->slug }}">
 
                                 <input type="hidden" name="image"
                                        value="{{ asset($product->image) }}">
@@ -87,8 +89,10 @@
                                role="tab" aria-controls="nav-home" aria-selected="true">Chi tiết sản phẩm</a>
                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
                                role="tab" aria-controls="nav-profile" aria-selected="false">Thông số kĩ thuật</a>
+                            @if(!empty($product->promotion))
                             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
                                role="tab" aria-controls="nav-contact" aria-selected="false">Chương trình khuyến mãi</a>
+                            @endif
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
@@ -99,9 +103,11 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             {!! $product->specification !!}
                         </div>
+                        @if(!empty($product->promotion))
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             {!! $product->promotion !!}
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -110,13 +116,13 @@
                 @foreach($cate->products as $prod)
                     <div class="media products">
                         <div class="media-left">
-                            <a href="{{ route('product.show', ['id' => $prod->id, 'slug_product' => str_slug($prod->name)]) }}">
+                            <a href="{{ route('product.show', $prod->slug) }}">
                                 <img class="media-object" alt="{{ $prod->name }}"
                                      src="{{ asset($prod->image) }}">
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="{{ route('product.show', ['id' => $prod->id, 'slug_product' => str_slug($prod->name)]) }}">
+                            <a href="{{ route('product.show', $prod->slug) }}">
                                 <h4 class="media-heading">{{ $prod->name }}</h4>
                             </a>
                             <span class="media-price">{{ number_format($prod->price) }} đ</span>

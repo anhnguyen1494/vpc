@@ -35,6 +35,9 @@ a{
 #logo {
     margin-top: 10px;
 }
+#logo img {
+    max-width: 100%;
+}
 #hotline {
     float: right;
     position: relative;
@@ -97,7 +100,7 @@ a{
     left: 0;
     border: 1px solid #e8e8e8;
     border-top: 0;
-    background: #fff;
+    background: gray;
     width: 100%;
     z-index: 1;
 }
@@ -243,6 +246,7 @@ img.loader {
     max-height: 51px;
     z-index: 2;
     background: #4267b2;
+    border-bottom: 2px solid black;
 }
 .navbar{
     padding: 0;
@@ -251,8 +255,9 @@ img.loader {
     padding: 0;
 }
 .navbar-toggler{
-    background-color: #333;
-    border-color: #fff;
+    margin-right: 5px;
+    background-color: #4267b2;
+    border: 1px solid white!important;
 }
 .hide{
     display: none!important;
@@ -331,7 +336,6 @@ img.loader {
     background: white;
 }
 .f-logo img {
-    border: 3px solid #949494;
     border-radius: 5px;
     max-width: 200px;
 }
@@ -366,7 +370,51 @@ img.loader {
 .contact_right ul li a{
     display: block;
 }
-
+#mobileslider img{
+    max-height: 137px;
+}
+#autoSuggestionsList {
+    background: #f5f3f3;
+    float: left;
+    padding: 0px 5px 5px 5px;
+    position: absolute;
+    width: 98.3%;
+    z-index: 10;
+    display: none;
+}
+#autoSuggestionsList .sgg-row {
+    border-top: 1px solid #dbdbdb;
+    float: left;
+    padding: 7px 0;
+    width: 100%;
+}
+#autoSuggestionsList .sgg-row .sgg-image {
+    float: left;
+    margin-right: 8px;
+}
+#autoSuggestionsList .sgg-row .sgg-image img {
+    border: 1px solid #dbdbdb;
+    background: #fff;
+}
+#autoSuggestionsList .sgg-row .sgg-title a {
+    font-size: 13px;
+    color: #000;
+    transition: all 0.5s;
+}
+#autoSuggestionsList .sgg-row .sgg-sellprice {
+    color: #4267b2;
+    font-weight: bold;
+    transition: all 0.5s;
+    font-size: 13px;
+}
+#autoSuggestionsList .sgg-row:hover .sgg-title a {
+    padding-left: 20px;
+    transition: all 0.5s;
+}
+#autoSuggestionsList .sgg-row:hover .sgg-sellprice {
+    text-indent: 20px;
+    transition: all 0.5s;
+}
 @media (max-width: 1199px){
     .custom-navbar .navbar-brand img {
         max-height: 51px;
@@ -394,7 +442,7 @@ img.loader {
         margin-top: 51px;
     }
     #navbarNavDropdown{
-        background: white;
+        background: whitesmoke;
     }
     #navbarNavDropdown .nav-item a{
         color: black;
@@ -407,5 +455,25 @@ img.loader {
     }
     .social-claim2 {
         margin-top: 15px;
+    }
+    .contact_right {
+        position: fixed;
+        top: auto;
+        right: auto;
+        left: 0;
+        background: white;
+        bottom: 0;
+        border-radius: 0 5px 0 0;
+        border: 1px solid black;
+        box-shadow: 0 0 10px 0 #000;
+        -moz-box-shadow: 0 0 10px 0 #000;
+        -webkit-box-shadow: 0 0 10px 0 #000;
+    }
+    .contact_right ul li{
+        float: left;
+        padding: 10px;
+    }
+    .contact_right .fa-3x{
+        font-size: 2em;
     }
 }

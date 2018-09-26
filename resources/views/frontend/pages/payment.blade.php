@@ -7,55 +7,100 @@
 @section('main')
     <div class="container">
         <div class="col-xs-12">
-            <div class="col-xs-12">
-                <div class="header">
-                    <span>Đơn hàng</span>
-                </div>
-                <table id="cart">
-                    <tbody>
-                    <tr>
-                        <th>STT</th>
-                        <th>Mã - Tên sản phẩm</th>
-                        <th>Hình ảnh</th>
-                        <th>Giá sản phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Thành tiền</th>
-                    </tr>
-                    @if(count($cart) > 0)
-                        @php( $stt = 0)
-                        @foreach($cart as $key => $product)
-                            @php($stt = ++$stt)
-                            <tr>
-                                <td>
-                                    {{ $stt }}
-                                </td>
-                                <td>
-                                    <a href="{{ route('product.show', ['id' => $product->id, 'slug_product' => str_slug($product->name)]) }}">
-                                        <b>{{ $product->options->code_pro }} - {{ $product->name }}</b>
-                                    </a>
-                                </td>
-                                <td><img class="cart_img"
-                                         src="{{ $product->options->image }}">
-                                </td>
-                                <td>{{ number_format($product->price) }}</td>
-                                <td style="width:92px;">
-                                    {{ $product->qty }}
-                                </td>
-                                <td>{{ number_format($product->price * $product->qty) }}</td>
-                            </tr>
-                        @endforeach
-                    @else
+            <div class="hidden-xs hidden-sm">
+                <div class="col-xs-12">
+                    <div class="header">
+                        <span>Đơn hàng</span>
+                    </div>
+                    <table id="cart">
+                        <tbody>
                         <tr>
-                            <td colspan="6" class="text-center"><b>Không có sản phẩm nào</b></td>
+                            <th>STT</th>
+                            <th>Mã - Tên sản phẩm</th>
+                            <th>Hình ảnh</th>
+                            <th>Giá sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
                         </tr>
-                    @endif
-                    <tr>
-                        <td colspan="5">Tổng cộng</td>
-                        <td style="color:#4267b2;font-weight:bold;">{{ number_format($total_cart) }} VNĐ</td>
-                    </tr>
+                        @if(count($cart) > 0)
+                            @php( $stt = 0)
+                            @foreach($cart as $key => $product)
+                                @php($stt = ++$stt)
+                                <tr>
+                                    <td>
+                                        {{ $stt }}
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('product.show', $product->options->slug) }}">
+                                            <b>{{ $product->options->code_pro }} - {{ $product->name }}</b>
+                                        </a>
+                                    </td>
+                                    <td><img class="cart_img"
+                                             src="{{ $product->options->image }}">
+                                    </td>
+                                    <td>{{ number_format($product->price) }}</td>
+                                    <td style="width:92px;">
+                                        {{ $product->qty }}
+                                    </td>
+                                    <td>{{ number_format($product->price * $product->qty) }}</td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="6" class="text-center"><b>Không có sản phẩm nào</b></td>
+                            </tr>
+                        @endif
+                        <tr>
+                            <td colspan="5">Tổng cộng</td>
+                            <td style="color:#4267b2;font-weight:bold;">{{ number_format($total_cart) }} VNĐ</td>
+                        </tr>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="hidden-lg hidden-md">
+                <div class="header">
+                    <span>Thanh toán</span>
+                </div>
+
+                    <table id="cart">
+                        <tbody>
+                        @if(count($cart) > 0)
+                            @foreach($cart as $rowid => $product)
+                                <tr>
+                                    <td colspan="2"><b>HIK-01 - Lắp đặt 1 camera HIKVISION</b></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><img class="cart_img"
+                                                         src="{{ $product->options->image }}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Giá : {{ number_format($product->price) }} VNĐ</td>
+                                    <td style="width: 80px">
+                                        SL: {{ $product->qty }}
+                                    </td>
+                                </tr>
+                                <tr class="text_last">
+                                    <td colspan="2">Thành tiền: {{ number_format($product->price * $product->qty) }} VNĐ
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="2" class="text-center"><b>Không có sản phẩm nào</b></td>
+                            </tr>
+                        @endif
+                        <tr>
+                            <td colspan="2">Tổng cộng</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="color:#ff0000;font-weight:bold;">{{ number_format($total_cart) }} VNĐ</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                <div class="clear"></div>
             </div>
             <div class="col-xs-12">
                 <div class="header">

@@ -76,12 +76,12 @@
                             @foreach($products as $product)
                             <div class="col-6 col-sm-4 col-lg-3">
                                 <div class="thumbnail products" style="height: 253px;">
-                                    <a href="{{ route('product.show', ['id' => $product->id, 'slug_product' => str_slug($product->name)]) }}">
+                                    <a href="{{ route('product.show', $product->slug) }}">
                                         <img alt="{{ $product->name }}"
                                              src="{{ asset($product->image) }}">
                                     </a>
                                     <div class="caption">
-                                        <a href="{{ route('product.show', ['id' => $product->id, 'slug_product' => str_slug($product->name)]) }}">
+                                        <a href="{{ route('product.show', $product->slug) }}">
                                             <h3>{{ $product->name }}</h3>
                                         </a>
                                         <div class="clear"></div>

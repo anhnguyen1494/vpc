@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-xs-12 col-md-4 col-lg-3">
+                        <div class="col-12 col-md-4 col-lg-3">
                             <div class="social-claim">
                                 <div class="claim_header">Cam kết</div>
                                 <div class="claim">Sản phẩm hàng hóa chính hãng, đa dạng, phong phú</div>
@@ -12,7 +12,7 @@
                                 <div class="claim">Dịch vụ chăm sóc khách hàng uy tín, tận tâm</div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-4 col-lg-3">
+                        <div class="col-12 col-md-4 col-lg-3">
                             <div class="social-claim2">
                                 <div class="claim_header">Hỗ trợ khách hàng</div>
                                 <ul>
@@ -23,7 +23,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-4 col-lg-3">
+                        <div class="col-12 col-md-4 col-lg-3">
                             <div class="social-claim2">
                                 <div class="claim_header">Thông tin công ty</div>
                                 <ul>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-4 col-lg-3">
+                        <div class="col-12 col-md-4 col-lg-3">
                             <div class="social-claim2">
                                 <div class="claim_header">Tổng đài trợ giúp</div>
                                 <div style="margin:10px;">
@@ -60,8 +60,8 @@
                                                 <p><span style="color:#333333;"><span style="font-size:14px;">Tư vấn bán hàng</span></span>
                                                 </p>
 
-                                                <p><span style="color:#ba0000;"><span
-                                                                style="font-size:20px;"><strong>0984 489 688</strong></span></span>
+                                                <p><span style="color:#ba0000;"><a href="tel:0984163898"
+                                                                style="font-size:20px;"><strong>0984.163.898</strong></a></span>
                                                 </p>
                                             </td>
                                         </tr>
@@ -75,14 +75,14 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2" style="text-align: center;"><span
-                                                        style="color:#B22222;"><strong><span
-                                                                style="font-size:16px;">(04)6328 2964</span></strong></span>
+                                                        style="color:#B22222;"><strong><a href="tel:0984163898"
+                                                                style="font-size:16px;">0984.163.898</a></strong></span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2"><span style="font-size:13px;"><span
+                                            <td colspan="2"><span style="font-size:13px;"><a href="mail:maytinhplc@gmail.com"
                                                             style="color:#555555;"><img alt=""
-                                                                                        src="{{ asset('/frontend/images/mailer.png')}}">  fptcamera.vn@gmail.com</span></span>
+                                                                                        src="{{ asset('/frontend/images/mailer.png')}}">  maytinhplc@gmail.com</a></span>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -98,7 +98,7 @@
 </div>
 <div class="container-fluid bg-footer">
     <div class="row">
-        <div class="col-xs-12 offset-xs-0 col-md-10 offset-md-1">
+        <div class="col-12 offset-xs-0 col-md-10 offset-md-1">
             <div class="row">
                 <div class="col-md-2 hidden-xs hidden-sm">
                     <div class="f-logo">
@@ -109,20 +109,20 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-5">
+                <div class="col-12 col-md-5">
                     <div class="f-address">
                         <p>
                                 <span style="color:#ff6600;">
                                     <strong>CỬA HÀNG CAMERA DỊCH VỤ TẠI HÀ NỘI</strong></span><span
                                     style="color:#FF8C00;"><strong> </strong>
                                 </span><br>
-                            Địa chỉ : <span style="color:#FFD700;">Số 12 Ngõ 18/46 Định Công Thượng, Q.Hoàng Mai, TP. Hà Nội</span><br>
-                            Điện thoại : <span style="color:#FFD700;">024 6328 2964  - 0919 654 688</span><br>
-                            Website : <span style="color:#FFD700;">http://fptcamera.vn</span>
+                            Địa chỉ : <span style="color:#FFD700;">Số 39 Trần Quốc Toản, Phường Trần Hưng Đạo, Hoàn Kiếm, Hà Nội</span><br>
+                            Điện thoại : <span style="color:#FFD700;">0984163898</span><br>
+                            Website : <span style="color:#FFD700;">http://vanphongcamera.vn</span>
                         </p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-5">
+                <div class="col-12 col-md-5">
                     <div class="f-address">
                         <p><span style="color:#FF8C00;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
                         <p>

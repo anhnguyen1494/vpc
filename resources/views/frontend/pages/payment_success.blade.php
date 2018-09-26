@@ -12,7 +12,7 @@
 
 @section('main')
     <div class="container">
-        <div class="col-xs-12">
+        <div class="col-12">
             <div class="order_success">
                 <h3>Chúc mừng bạn đã đăng ký đặt hàng thành công</h3>
                 <p>Chúng tôi sẽ sớm liên hệ và tư vấn sản phẩm cho bạn để xác nhận đơn hàng</p>

@@ -42,7 +42,7 @@ class OrderSuccess extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->subject('ĐẶT HÀNG THÀNH CÔNG - VANPHONGCAMERA')
+        return (new MailMessage)->subject('Có đặt hàng mới - VanPhongCamera')
                 ->view('emails.order_success',['order' => $this->order]);
     }
 

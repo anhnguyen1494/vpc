@@ -1,11 +1,7 @@
 <div class="container" style="width: 600px;">
-    <p>From: {{ env('MAIL_NAME') }}</p>
     <p>Date: {{ date('d/m/Y H:i:s',time()) }}</p>
-    <p>Subject: [VANPHONGCAMERA - XÁC NHẬN ĐƠN HÀNG]</p>
-    <p>To: {{ $order->name1 }}</p>
-    <a href="{{ route('home') }}"><img src="{{ asset('/frontend/images/logo-vanphong.png') }}" alt=""
-                                       style="display: block;margin: 15px auto;"></a>
-    <h2 style="text-align: center;margin: 15px auto;">Thông báo đặt hàng thành công</h2>
+    <p style="font-size: 24px;color: #4267b2">Kiểm tra đơn hàng: <a href="{{ route('backend.order.detail',$order->id) }}">tại đây</a></p>
+    <h2 style="text-align: center;margin: 15px auto;">Thông tin khách hàng</h2>
     <h3>Thông tin khách hàng</h3>
     <p>Họ tên thanh toán: {{ $order->name1 }} </p>
     <p>Số điện thoại: {{ $order->phone1 }} </p>
@@ -34,7 +30,7 @@
                     {{ $key + 1 }}
                 </td>
                 <td>
-                    <a href="{{ route('product.show', ['id' => $product->prod_id, 'slug_product' => str_slug($product->prod_name)]) }}">
+                    <a href="{{ route('product.show', $product->product->slug) }}">
                         <b>{{ $product->prod_name }}</b>
                     </a>
                 </td>
@@ -51,8 +47,4 @@
         </tr>
         </tbody>
     </table>
-    <p>Chúng tôi sẽ sớm liên hệ và tư vấn cho bạn về sản phẩm và xác nhận đơn hàng</p>
-    <p style="margin-bottom: 20px">Đơn hàng sẽ được chuyển đến bạn trong thời gian sớm nhất</p>
-    <p><i>Trân trọng,</i></p>
-    <p><i>VanPhongCamera.vn</i></p>
 </div>

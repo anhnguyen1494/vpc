@@ -56,6 +56,15 @@ class ProductCrudController extends CrudController
             //], // extra HTML attributes for the field wrapper - mostly for resizing fields
             //'readonly'=>'readonly',
         ]);
+        $this->crud->addField([
+            'name' => 'slug',
+            'label' => 'Slug (URL)',
+            'type'    => 'hidden',
+            'hint' => 'Tự động sinh ra (vd: /lap-dat-2-camera-hikvision).',
+//            'disabled' => 'disabled',
+            'tab' => 'Thông tin cơ bản',
+
+        ]);
         $this->crud->addField([    // Image
             'name' => 'image',
             'label' => 'Ảnh  (*)',
@@ -138,8 +147,8 @@ class ProductCrudController extends CrudController
             'label'   => 'Tình trạng hàng  (*)', // the input label
             'type'    => 'radio',
             'options' => [ // the key will be stored in the db, the value will be shown as label;
-                1 => 'Còn hàng',
-                0 => 'Hết hàng',
+                0 => 'Còn hàng',
+                1 => 'Hết hàng',
             ],
             // optional
             'inline' => true, // show the radios all on the same line?

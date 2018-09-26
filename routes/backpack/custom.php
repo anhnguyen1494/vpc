@@ -19,6 +19,7 @@ Route::group([
     CRUD::resource('monster', 'MonsterCrudController');
     CRUD::resource('icon', 'IconCrudController');
     CRUD::resource('product', 'ProductCrudController');
+    CRUD::resource('category', 'CategoryCrudController');
     Route::get('don-hang',['as' => 'backend.order', 'uses' => 'OrderController@index']);
     Route::get('chi-tiet-don-hang/{oid}',['as' => 'backend.order.detail', 'uses' => 'OrderController@detail']);
     Route::post('update-status/{oid}',['as' => 'backend.order.update_status', 'uses' => 'OrderController@updateStatus']);

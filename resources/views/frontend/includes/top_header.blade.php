@@ -50,8 +50,7 @@
                         <div class="name">Tư vấn lắp đặt camera</div>
                         <div class="clear"></div>
                         <div class="phone">
-                            <a href="tel:024.6328.2964">024.6328.2964</a>
-                            <a href="tel:0984 489 688">0984 489 688</a>
+                            <a href="tel:0984163898">0984.163.898</a>
                         </div>
                     </div>
                 </div>

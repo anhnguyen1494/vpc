@@ -40,6 +40,7 @@
 <div class="wrapper">
     @include('frontend.includes.menu_xs')
     @include('frontend.includes.top_header')
+    @include('frontend.includes.slider_mobile')
     @include('frontend.includes.menu')
     @yield('main')
     @include('frontend.includes.footer')
@@ -72,31 +73,28 @@
         if(keyword.length == 0) {
             $('#autoSuggestionsList').fadeOut(400);
         } else {
-            $.post("http://fptcamera.vn/ajaxhandle/client_products_ajaxhandler/Ajax_Get_All_Product_Client",
+            $.post("{{ route('search-ajax') }}",
                 {keyword : keyword},
                 function(data){
-                    if(data.length > 14) {
+                    console.log(data, data.message.length);
+                    if(data.message.length > 0) {
                         $('#autoSuggestionsList').fadeIn(400);
                         // var obj = jQuery.parseJSON(data);
-                        var obj = JSON.parse(data);
+                        var obj = data.message;
                         var strhtml = '';
                         //$('#autoSuggestionsList').html(data['message']);
                         strhtml += '<div class="sgg-outer">';
-                        for(var index in obj) {
-                            //alert(obj.message[1].label);
-                            //alert(obj.length());
-                            for(var i=0;i<obj[index].length;i++) {
+                        $.each(obj, function( index, value ) {
                                 //alert(obj.message[i].value);
                                 //append
                                 strhtml += '<div class="sgg-row">';
-                                strhtml += '<div class="sgg-image"><img width="50" height="50" src="http://fptcamera.vn/resources/uploads/images/automatic/san-pham/thumbs/' + obj.message[i].Image + '"/></div>';
+                                strhtml += '<div class="sgg-image"><img width="50" height="50" src="http://vanphongcamera.vn/' + value.image + '"/></div>';
                                 strhtml += '<div class="sgg-right">';
-                                strhtml += '<div class="sgg-title"><a href="http://fptcamera.vn/' + obj.message[i].Slug + '">' + obj.message[i].Title + '</a></div>';
-                                strhtml += '<div class="sgg-sellprice">' + parseFloat(obj.message[i].SellPrice).toFixed().replace(/./g, function(c, i, a) {return i && c !== "." && ((a.length - i) % 3 === 0) ? '.' + c : c;}) + ' đ</div>';
+                                strhtml += '<div class="sgg-title"><a href="http://vanphongcamera.vn/san-pham/' + value.slug +'">' + value.name + '</a></div>';
+                                strhtml += '<div class="sgg-sellprice">' + parseFloat(value.price).toFixed().replace(/./g, function(c, i, a) {return i && c !== "." && ((a.length - i) % 3 === 0) ? '.' + c : c;}) + ' đ</div>';
                                 strhtml += '</div>';
                                 strhtml += '</div>';
-                            }
-                        }
+                        });
                         strhtml += '</div>';
                         $('#autoSuggestionsList').html(strhtml);
                     } else {

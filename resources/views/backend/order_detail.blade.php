@@ -124,7 +124,7 @@
                                     {{ $key + 1 }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('product.show', ['id' => $product->prod_id, 'slug_product' => str_slug($product->prod_name)]) }}">
+                                    <a href="{{ route('product.show',$product->product->slug ) }}">
                                         <b>{{ $product->prod_name }}</b>
                                     </a>
                                 </td>

@@ -6,11 +6,14 @@ use Backpack\CRUD\CrudTrait;
 use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Product extends Model implements Buyable
 {
     use CrudTrait;
     use HasTranslations;
+    use Sluggable, SluggableScopeHelpers;
 
     /*
     |--------------------------------------------------------------------------
@@ -23,14 +26,14 @@ class Product extends Model implements Buyable
     public $timestamps = true;
     // protected $guarded = ['id'];
     protected $fillable = ['name', 'image', 'details','promotion','trademark',
-        'price', 'price_real', 'category_id','code_pro','specification',
+        'price', 'price_real', 'category_id','code_pro','specification','slug',
         'guarantee','status','meta_title','meta_description','meta_keywords'
     ];
     // protected $hidden = [];
     // protected $dates = [];
 //    public $translatable = ['name', 'description', 'details', 'features', 'extras'];
-    const STATUS_STILL = 1;
-    const STATUS_OVER = 0;
+    const STATUS_STILL = 0;
+    const STATUS_OVER = 1;
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
@@ -42,12 +45,21 @@ class Product extends Model implements Buyable
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'name',
+            ],
+        ];
+    }
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
-
+    public function order_detail(){
+        return $this->hasOne(OrderDetail::class, 'prod_id');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
@@ -74,4 +86,12 @@ class Product extends Model implements Buyable
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+    public function getSlugOrTitleAttribute()
+    {
+        if ($this->slug != '') {
+            return $this->slug;
+        }
+
+        return $this->name;
+    }
 }

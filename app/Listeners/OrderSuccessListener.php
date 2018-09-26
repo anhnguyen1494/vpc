@@ -30,7 +30,7 @@ class OrderSuccessListener
     public function handle(OrderSuccessEvent $event)
     {
         $order = $event->order;
-        Notification::route('mail', $order->email1)
+        Notification::route('mail', env('MY_EMAIL'))
             ->notify(new OrderSuccess($order));
     }
 }
