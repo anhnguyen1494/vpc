@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Models\Category;
 use App\Models\Product;
 use Backpack\PageManager\app\Models\Page;
+use Backpack\Settings\app\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

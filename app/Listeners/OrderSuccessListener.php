@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\OrderSuccessEvent;
 use App\Notifications\OrderSuccess;
+use Backpack\Settings\app\Models\Setting;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Notification;
@@ -30,7 +31,8 @@ class OrderSuccessListener
     public function handle(OrderSuccessEvent $event)
     {
         $order = $event->order;
-        Notification::route('mail', env('MY_EMAIL'))
+        $email = Setting::get('my_email');
+        Notification::route('mail', $email)
             ->notify(new OrderSuccess($order));
     }
 }
