@@ -11,12 +11,11 @@
         <div class="col-xs-12 hidden-xs hidden-sm">
             <div id="sub-menu">
                 <div class="row">
-                    <div class="col-xs-12 col-lg-7">
+                    <div class="col-xs-12 col-lg-12">
                         <div class="contain">
-                            <a href="#">Sơ lược công ty</a>
-                            <a href="#">Chính sách ưu đãi</a>
-                            <a href="#">Tin camera</a>
-                            <a href="#">Liên hệ</a>
+                            @foreach($pages as $page)
+                            <a href="{{ route('frontend.page.show',$page->slug) }}">{{ $page->title }}</a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
