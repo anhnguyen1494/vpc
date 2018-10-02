@@ -47,7 +47,11 @@
                                                                 <h3>{{ $product->name }}</h3></a>
                                                             <div class="clear"></div>
                                                             <span class="new-price">{{ number_format($product->price) }} đ</span>
-                                                            <span class="old-price">{{ number_format($product->price_real) }} đ</span>
+                                                            <span class="old-price">
+                                                                @if(!empty($product->price_real))
+                                                                {{ number_format($product->price_real) }} đ
+                                                                @endif
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
