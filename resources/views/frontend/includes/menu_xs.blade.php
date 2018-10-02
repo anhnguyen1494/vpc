@@ -15,7 +15,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    @foreach($categorys as $key => $cate)
+                    @foreach($share['categorys'] as $key => $cate)
                     <li class="nav-item">
                         <a href="{{ route('category',$cate->slug) }}" class="nav-link">
                             <img alt="{{ $cate->name }}"

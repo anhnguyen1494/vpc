@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('/frontend/images/icon.png') }}" rel="shortcut icon" type="image/png"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Công ty Văn Phong Camera cung cấp camera uy tín, chất lượng"/>
+    <meta property="og:image" content="{{ asset('/frontend/images/logo-vpc.png') }}"/>
     <meta name="description" content="Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.">
     <title>
         @hasSection('title')
@@ -47,6 +50,34 @@
 </div>
 @include('frontend.includes.contact_right')
 @include ('frontend.includes.partials.params')
+<div class="modal fade" id="supportonlineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="supportonlineModal">Hỗ trợ trực tuyến</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modal_hotline_list">
+                    <div class="row">
+                        <div class="col-6 col-md-4">
+                            <div class="hotline">
+                                <p class="title">Mr: Cường</p>
+                                <p>Tư vấn bán hàng</p>
+                                <p>Tel: {{ $share['settings']['phone'] }}</p>
+                                <a style="float:left" href="skype:{{ $share['settings']['skype'] }}?chat" class="icons skype"><i
+                                            style="font-size:25px;margin-left:10px;" class="fa fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @yield('before_scripts')
 <script src="{{ asset('/frontend/js/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('/packages/bootstrap/js/popper.min.js') }}"></script>
@@ -76,6 +107,7 @@
             $.post("{{ route('search-ajax') }}",
                 {keyword : keyword},
                 function(data){
+                    var url = "{{ url('/') }}";
                     console.log(data, data.message.length);
                     if(data.message.length > 0) {
                         $('#autoSuggestionsList').fadeIn(400);
@@ -88,9 +120,9 @@
                                 //alert(obj.message[i].value);
                                 //append
                                 strhtml += '<div class="sgg-row">';
-                                strhtml += '<div class="sgg-image"><img width="50" height="50" src="http://vanphongcamera.vn/' + value.image + '"/></div>';
+                                strhtml += '<div class="sgg-image"><img width="50" height="50" src="'+url+'/' + value.image + '"/></div>';
                                 strhtml += '<div class="sgg-right">';
-                                strhtml += '<div class="sgg-title"><a href="http://vanphongcamera.vn/san-pham/' + value.slug +'">' + value.name + '</a></div>';
+                                strhtml += '<div class="sgg-title"><a href="'+url+'/san-pham/' + value.slug +'">' + value.name + '</a></div>';
                                 strhtml += '<div class="sgg-sellprice">' + parseFloat(value.price).toFixed().replace(/./g, function(c, i, a) {return i && c !== "." && ((a.length - i) % 3 === 0) ? '.' + c : c;}) + ' đ</div>';
                                 strhtml += '</div>';
                                 strhtml += '</div>';

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use Backpack\Settings\app\Models\Setting;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,7 +17,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $categorys = Category::with('products')->get();
-        View::share('categorys', $categorys);
+        $sets = Setting::all();
+        $settings = [];
+        foreach ($sets as $setting){
+            $settings[$setting->key] = $setting->value;
+        }
+        $share = [
+            'categorys' => $categorys,
+            'settings' => $settings
+        ];
+        View::share('share', $share);
     }
 
     /**

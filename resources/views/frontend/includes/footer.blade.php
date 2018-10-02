@@ -34,13 +34,13 @@
                                 <div id="social_us">
                                     <div class="social_us_header">Kết nối với chúng tôi</div>
                                     <div id="f_social">
-                                        <a target="_blank" rel="nofollow" href="#">
+                                        <a target="_blank" rel="nofollow" href="{{ $share['settings']['facebook'] }}">
                                             <img src="{{ asset('/frontend/images/f_fb.png') }}">
                                         </a>
-                                        <a target="_blank" rel="nofollow" href="#">
+                                        <a target="_blank" rel="nofollow" href="{{ $share['settings']['google'] }}">
                                             <img src="{{ asset('/frontend/images/f_gplus.png') }}">
                                         </a>
-                                        <a target="_blank" rel="nofollow" href="#">
+                                        <a target="_blank" rel="nofollow" href="{{ $share['settings']['youtube'] }}">
                                             <img src="{{ asset('/frontend/images/f_yt.png') }}">
                                         </a>
                                     </div>
@@ -60,8 +60,8 @@
                                                 <p><span style="color:#333333;"><span style="font-size:14px;">Tư vấn bán hàng</span></span>
                                                 </p>
 
-                                                <p><span style="color:#ba0000;"><a href="tel:0984163898"
-                                                                style="font-size:20px;"><strong>0984.163.898</strong></a></span>
+                                                <p><span style="color:#ba0000;"><a href="tel:{{ $share['settings']['phone'] }}"
+                                                                                   style="font-size:20px;"><strong>{{ $share['settings']['phone'] }}</strong></a></span>
                                                 </p>
                                             </td>
                                         </tr>
@@ -75,14 +75,18 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2" style="text-align: center;"><span
-                                                        style="color:#B22222;"><strong><a href="tel:0984163898"
-                                                                style="font-size:16px;">0984.163.898</a></strong></span>
+                                                        style="color:#B22222;"><strong><a href="tel:{{ $share['settings']['phone'] }}"
+                                                                                          style="font-size:16px;">{{ $share['settings']['phone'] }}</a></strong></span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2"><span style="font-size:13px;"><a href="mail:maytinhplc@gmail.com"
-                                                            style="color:#555555;"><img alt=""
-                                                                                        src="{{ asset('/frontend/images/mailer.png')}}">  maytinhplc@gmail.com</a></span>
+                                            <td colspan="2">
+                                                <span style="font-size:13px;">
+                                                    <a href="mail:{{ $share['settings']['email'] }}" style="color:#555555;">
+                                                        <img alt="" src="{{ asset('/frontend/images/mailer.png')}}">
+                                                        {{ $share['settings']['email'] }}
+                                                    </a>
+                                                </span>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -107,34 +111,34 @@
                                  alt="Camera FPT Việt Nam tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
                                  src="{{ asset('/frontend/images/logo-vanphong.png') }}">
                         </a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="f-address">
-                        <p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <div class="f-address">
+                                    <p>
                                 <span style="color:#ff6600;">
                                     <strong>CỬA HÀNG CAMERA DỊCH VỤ TẠI HÀ NỘI</strong></span><span
-                                    style="color:#FF8C00;"><strong> </strong>
+                                                style="color:#FF8C00;"><strong> </strong>
                                 </span><br>
-                            Địa chỉ : <span style="color:#FFD700;">Số 39 Trần Quốc Toản, Phường Trần Hưng Đạo, Hoàn Kiếm, Hà Nội</span><br>
-                            Điện thoại : <span style="color:#FFD700;">0984163898</span><br>
-                            Website : <span style="color:#FFD700;">http://vanphongcamera.vn</span>
-                        </p>
+                                        Địa chỉ : <span style="color:#FFD700;">{{ $share['settings']['address'] }}</span><br>
+                                        Điện thoại : <span style="color:#FFD700;">{{ $share['settings']['phone'] }}</span><br>
+                                        Website : <span style="color:#FFD700;">{{ $share['settings']['website'] }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <div class="f-address">
+                                    <p><span style="color:#FF8C00;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
+                                    <p>
+                                        <a href="#">
+                                            <span style="color:#cccccc;">Lắp đặt camera tại Hà Nội</span>
+                                        </a>
+                                    </p>
+                                    <p style="text-align: right;"></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="f-address">
-                        <p><span style="color:#FF8C00;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
-                        <p>
-                            <a href="#">
-                                <span style="color:#cccccc;">Lắp đặt camera tại Hà Nội</span>
-                            </a>
-                        </p>
-                        <p style="text-align: right;"></p>
-                    </div>
+                    <div class="clear"></div>
                 </div>
             </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-</div>

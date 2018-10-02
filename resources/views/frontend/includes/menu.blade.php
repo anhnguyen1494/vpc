@@ -7,7 +7,7 @@
                 </div>
                 <ul class="sub-page" style="{{ !Request::is('/') ? 'display:none' : '' }}">
                     <ul>
-                        @foreach($categorys as $key => $cate)
+                        @foreach($share['categorys'] as $key => $cate)
                             <li>
                                 <a href="{{ route('category',$cate->slug) }}">
                                     <img alt="{{ $cate->name }}"

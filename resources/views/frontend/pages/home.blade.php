@@ -70,32 +70,4 @@
         @endif
     </div>
 
-    <div class="modal fade" id="supportonlineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="supportonlineModal">Hỗ trợ trực tuyến</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="modal_hotline_list">
-                        <div class="row">
-                            <div class="col-6 col-md-4">
-                                <div class="hotline">
-                                    <p class="title">Mr: Cường</p>
-                                    <p>Tư vấn bán hàng</p>
-                                    <p>Tel: 0984.163.898</p>
-                                    <a style="float:left" href="skype:cuonghh10?chat" class="icons skype"><i
-                                                style="font-size:25px;margin-left:10px;" class="fa fa-skype"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
