@@ -22,7 +22,7 @@
                             <a data-toggle="modal" data-target=".bs-example-modal-lg">
                                 <img style="cursor:pointer;display:block;margin:0 auto;background:#fff;"
                                      alt="{{ $product->name }}"
-                                     src="{{ asset($product->image) }}">
+                                     src="{{ asset($product->image).'?'.time() }}">
                             </a>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                         <div class="media-left">
                             <a href="{{ route('product.show', $prod->slug) }}">
                                 <img class="media-object" alt="{{ $prod->name }}"
-                                     src="{{ asset($prod->image) }}">
+                                     src="{{ asset($prod->image).'?'.time() }}">
                             </a>
                         </div>
                         <div class="media-body">

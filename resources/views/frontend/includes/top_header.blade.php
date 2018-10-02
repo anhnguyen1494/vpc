@@ -10,7 +10,7 @@
                                     <a href="#">Sản phẩm bán chạy</a>|
                                     <a href="#">Sản phẩm khuyến mại</a>|
                                     <a href="#">Sản phẩm mới</a><img style="margin:-4px 0 0 2px;"
-                                                                     src="{{ asset('/frontend/images/new.gif') }}">
+                                                                     src="{{ asset('/frontend/images/new.gif').'?'.time() }}">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                         <a href="{{ route('home') }}">
                             <img title="LẮP ĐẶT CAMERA QUAN SÁT GIÁ RẺ"
                                  alt="Camera VPC Việt Nam tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
-                                 src="{{ asset('/frontend/images/logo-vanphong.png') }}">
+                                 src="{{ asset('/frontend/images/logo-vanphong.png').'?'.time() }}">
                         </a>
                     </div>
                 </div>

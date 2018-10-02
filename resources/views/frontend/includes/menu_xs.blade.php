@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark custom-navbar">
             <a class="navbar-brand" href="/">
                 <img alt="Camera Văn Phong Camera Việt Nam tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
-                     src="{{ asset('/frontend/images/logo-vanphong-mobi.png') }}">
+                     src="{{ asset('/frontend/images/logo-vanphong-mobi.png').'?'.time() }}">
             </a>
             <div id="top-hotline" style="float:right;">
                 <div class="name">
@@ -19,7 +19,7 @@
                     <li class="nav-item">
                         <a href="{{ route('category',$cate->slug) }}" class="nav-link">
                             <img alt="{{ $cate->name }}"
-                                 src="{{ asset($cate->image) }}">
+                                 src="{{ asset($cate->image).'?'.time() }}">
                             <span class="mc_title">{{ $cate->name }}</span>
                         </a>
                     </li>

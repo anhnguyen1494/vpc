@@ -39,7 +39,7 @@
                                                         <a href="{{ route('product.show', $product->slug) }}">
                                                             <img
                                                                     alt="{{ $product->name }}"
-                                                                    src="{{ asset($product->image) }}">
+                                                                    src="{{ asset($product->image).'?'.time() }}">
                                                         </a>
                                                         <div class="caption">
                                                             <a href="{{ route('product.show', $product->slug) }}">
@@ -62,7 +62,7 @@
                                     <a class="b_a2" href="{{ route('category',$category->slug) }}">
                                         <img class="image_right"
                                                 alt="{{ $category->name }}"
-                                                src="{{ asset($category->image_right) }}">
+                                                src="{{ asset($category->image_right).'?'.time() }}">
                                     </a>
                                 </div>
                             </div>

@@ -9,13 +9,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/lap-camera-tron-bo-khuyen-mai-2018.jpg') }}" alt="First slide"></a>
+                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/lap-camera-tron-bo-khuyen-mai-2018.jpg').'?'.time() }}" alt="First slide"></a>
                     </div>
                     <div class="carousel-item">
-                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/camera-benco-gia-re.jpg') }}" alt="Second slide"></a>
+                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/camera-benco-gia-re.jpg').'?'.time() }}" alt="Second slide"></a>
                     </div>
                     <div class="carousel-item">
-                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/lap-dat-mang-fpt.jpg') }}" alt="Third slide"></a>
+                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/lap-dat-mang-fpt.jpg').'?'.time() }}" alt="Third slide"></a>
                     </div>
                 </div>
                 {{--<a class="carousel-control-prev" href="#slider-left" role="button" data-slide="prev">--}}
@@ -28,8 +28,8 @@
                 {{--</a>--}}
             </div>
             <div class="col-md-4 banner-left">
-                <a href=""><img src="{{ asset('./frontend/images/slider/lap-mang-fpt.jpg') }}" alt="" class="d-block w-100"></a>
-                <a href=""><img src="{{ asset('./frontend/images/slider/doi-camera-cu-lay-moi.jpg') }}" alt="" class="d-block w-100"></a>
+                <a href=""><img src="{{ asset('./frontend/images/slider/lap-mang-fpt.jpg').'?'.time() }}" alt="" class="d-block w-100"></a>
+                <a href=""><img src="{{ asset('./frontend/images/slider/doi-camera-cu-lay-moi.jpg').'?'.time() }}" alt="" class="d-block w-100"></a>
             </div>
         </div>
     </div>

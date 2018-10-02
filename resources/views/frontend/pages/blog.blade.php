@@ -31,7 +31,7 @@
                         <div class="media-left">
                             <a href="{{ route('frontend.article.show', $arti->slug) }}">
                                 <img class="media-object" alt="{{ $arti->title }}" style="width: 70px; height: 70px"
-                                     src="{{ asset('/'.$arti->image) }}">
+                                     src="{{ asset('/'.$arti->image).'?'.time() }}">
                             </a>
                         </div>
                         @endif

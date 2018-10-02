@@ -9,16 +9,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/lap-dat-camera-quan-sat-fpt.jpg') }}" alt="First slide"></a>
+                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/lap-dat-camera-quan-sat-fpt.jpg').'?'.time() }}" alt="First slide"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/dich-vu-lap-dat-camera-giam-sat.jpg') }}" alt="Second slide"></a>
+                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/dich-vu-lap-dat-camera-giam-sat.jpg').'?'.time() }}" alt="Second slide"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/xem-camera-tren-dien-thoai-di-dong.jpg') }}" alt="Third slide"></a>
+                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/xem-camera-tren-dien-thoai-di-dong.jpg').'?'.time() }}" alt="Third slide"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/dau-ghi-hinh-camera-quan-sat1.jpg') }}" alt="Four slide"></a>
+                    <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider_mobile/dau-ghi-hinh-camera-quan-sat1.jpg').'?'.time() }}" alt="Four slide"></a>
                 </div>
             </div>
         </div>

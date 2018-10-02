@@ -35,13 +35,13 @@
                                     <div class="social_us_header">Kết nối với chúng tôi</div>
                                     <div id="f_social">
                                         <a target="_blank" rel="nofollow" href="{{ $share['settings']['facebook'] }}">
-                                            <img src="{{ asset('/frontend/images/f_fb.png') }}">
+                                            <img src="{{ asset('/frontend/images/f_fb.png').'?'.time() }}">
                                         </a>
                                         <a target="_blank" rel="nofollow" href="{{ $share['settings']['google'] }}">
-                                            <img src="{{ asset('/frontend/images/f_gplus.png') }}">
+                                            <img src="{{ asset('/frontend/images/f_gplus.png').'?'.time() }}">
                                         </a>
                                         <a target="_blank" rel="nofollow" href="{{ $share['settings']['youtube'] }}">
-                                            <img src="{{ asset('/frontend/images/f_yt.png') }}">
+                                            <img src="{{ asset('/frontend/images/f_yt.png').'?'.time() }}">
                                         </a>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                     <table border="0" cellpadding="1" cellspacing="1" style="width: 100%;">
                                         <tbody>
                                         <tr>
-                                            <td><img alt="" src="{{ asset('/frontend/images/tro-giup.png')}}"
+                                            <td><img alt="" src="{{ asset('/frontend/images/tro-giup.png').'?'.time() }}"
                                                      style="width: 68px; height: 81px;"></td>
                                             <td style="vertical-align: middle;">
                                                 <p><span style="color:#333333;"><span style="font-size:14px;">Tư vấn bán hàng</span></span>
@@ -70,7 +70,7 @@
                                                 <hr>
                                                 <span style="color:#555555;"><span style="font-size:13px;"><img
                                                                 alt=""
-                                                                src="{{ asset('/frontend/images/life_saver.png')}}">  Chăm sóc và hỗ trợ sau bán hàng</span></span>
+                                                                src="{{ asset('/frontend/images/life_saver.png').'?'.time() }}">  Chăm sóc và hỗ trợ sau bán hàng</span></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -83,7 +83,7 @@
                                             <td colspan="2">
                                                 <span style="font-size:13px;">
                                                     <a href="mail:{{ $share['settings']['email'] }}" style="color:#555555;">
-                                                        <img alt="" src="{{ asset('/frontend/images/mailer.png')}}">
+                                                        <img alt="" src="{{ asset('/frontend/images/mailer.png').'?'.time() }}">
                                                         {{ $share['settings']['email'] }}
                                                     </a>
                                                 </span>
@@ -109,7 +109,7 @@
                         <a href="{{ route('home') }}">
                             <img title="LẮP ĐẶT CAMERA QUAN SÁT GIÁ RẺ"
                                  alt="Camera FPT Việt Nam tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
-                                 src="{{ asset('/frontend/images/logo-vanphong.png') }}">
+                                 src="{{ asset('/frontend/images/logo-vanphong.png').'?'.time() }}">
                         </a>
                                 </div>
                             </div>
