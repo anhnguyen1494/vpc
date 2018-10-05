@@ -8,17 +8,7 @@
     <div class="container">
         <div class="col-12 pad-btm">
             <div class="row">
-                <div class="col-md-3 hidden-xs hidden-sm">
-                    {{--<div class="header">--}}
-                        {{--<span>{{ $category->name }}</span>--}}
-                    {{--</div>--}}
-                    {{--<div class="body">--}}
-                        {{--<a class="sort_list" href="http://fptcamera.vn/tron-bo-camera-gia-re">Trọn bộ camera giá rẻ</a>--}}
-                        {{--<a class="sort_list" href="http://fptcamera.vn/camera-nhap-khau">Camera Nhập khẩu</a>--}}
-                        {{--<a class="sort_list" href="http://fptcamera.vn/tron-bo-camera-hd">Trọn bộ camera HD</a>--}}
-                        {{--<a class="sort_list" href="http://fptcamera.vn/lap-dat-camera-dahua">Lắp đặt camera Dahua</a>--}}
-                        {{--<a class="sort_list" href="http://fptcamera.vn/lap-dat-camera-hikvision">Lắp đặt camera Hikvision</a>--}}
-                    {{--</div>--}}
+                <div class="col-md-3 hidden-xs hidden-sm" style="padding-left: 0;padding-right:15px">
                     <div class="header">
                         <span>Hãng sản xuất</span>
                     </div>
@@ -54,7 +44,7 @@
                     {{--</div>--}}
 
                 </div>
-                <div class="col-12 col-md-9" style="padding-left: 0;">
+                <div class="col-12 col-md-9" style="padding-left: 0;padding-right:0">
                     <div class="clear"></div>
                     <div class="header4">
                         <h1>{{ $category->name }}</h1>
@@ -71,25 +61,26 @@
                     </div>
                     <div class="clear"></div>
                     <div class="product_list">
-                        <div class="row">
+                        <div class="row" style="padding-right: 15px;">
                         @if(!empty($products))
                             @foreach($products as $product)
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="thumbnail products" style="height: 253px;">
-                                    <a href="{{ route('product.show', $product->slug) }}">
-                                        <img alt="{{ $product->name }}"
-                                             class="lazy" data-src="{{ asset($product->image).'?'.time() }}">
-                                    </a>
-                                    <div class="caption">
-                                        <a href="{{ route('product.show', $product->slug) }}">
-                                            <h3>{{ $product->name }}</h3>
-                                        </a>
-                                        <div class="clear"></div>
-                                        <span class="new-price">{{ number_format($product->price) }} đ</span>
-                                        <span class="old-price">{{ number_format($product->price_real) }} đ</span>
-                                    </div>
-                                </div>
-                            </div>
+                                @include('frontend.includes.product')
+                            {{--<div class="col-6 col-sm-4 col-lg-3">--}}
+                                {{--<div class="thumbnail products" style="height: 253px;">--}}
+                                    {{--<a href="{{ route('product.show', $product->slug) }}">--}}
+                                        {{--<img alt="{{ $product->name }}"--}}
+                                             {{--class="lazy" data-src="{{ asset($product->image).'?'.time() }}">--}}
+                                    {{--</a>--}}
+                                    {{--<div class="caption">--}}
+                                        {{--<a href="{{ route('product.show', $product->slug) }}">--}}
+                                            {{--<h3>{{ $product->name }}</h3>--}}
+                                        {{--</a>--}}
+                                        {{--<div class="clear"></div>--}}
+                                        {{--<span class="new-price">{{ number_format($product->price) }} đ</span>--}}
+                                        {{--<span class="old-price">{{ number_format($product->price_real) }} đ</span>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             @endforeach
                         @endif
                         </div>
