@@ -28,8 +28,8 @@
                 {{--</a>--}}
             </div>
             <div class="col-md-4 banner-left">
-                <a href=""><img src="{{ asset('./frontend/images/slider/lap-mang-fpt.jpg').'?'.time() }}" alt="" class="d-block w-100"></a>
-                <a href=""><img src="{{ asset('./frontend/images/slider/doi-camera-cu-lay-moi.jpg').'?'.time() }}" alt="" class="d-block w-100"></a>
+                <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/lap-mang-fpt.jpg').'?'.time() }}" alt="" ></a>
+                <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/doi-camera-cu-lay-moi.jpg').'?'.time() }}" alt=""></a>
             </div>
         </div>
     </div>

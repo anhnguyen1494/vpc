@@ -10,8 +10,7 @@
                         @foreach($share['categorys'] as $key => $cate)
                             <li>
                                 <a href="{{ route('category',$cate->slug) }}">
-                                    <img alt="{{ $cate->name }}"
-                                         src="{{ asset($cate->image).'?'.time() }}">
+                                    <img alt="{{ $cate->name }}" src="{{ asset($cate->image).'?'.time() }}">
                                     <span class="mc_title">{{ $cate->name }}<i class="fa fa-chevron-right hidden-md"></i></span>
                                 </a>
                             </li>
@@ -33,7 +32,7 @@
                 </div>
                 <div class="col-lg-4 hidden-xs hidden-sm" style="padding-left:0;">
                     <button type="button" class="btn btn-danger button-support" data-toggle="modal" data-target="#supportonlineModal">
-                        <img src="{{ asset('/frontend/images/yahoo-smile.png').'?'.time() }}">&nbsp;Hỗ trợ trực tuyến
+                        <img class="lazy" data-src="{{ asset('/frontend/images/yahoo-smile.png').'?'.time() }}">&nbsp;Hỗ trợ trực tuyến
                     </button>
                 </div>
             </div>

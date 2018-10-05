@@ -20,7 +20,7 @@
     @yield('meta')
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     @yield('before_styles')
-    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=vietnamese" rel="stylesheet">
+    {{--<link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=vietnamese" rel="stylesheet">--}}
     <link href="{{ asset('/packages/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/frontend/css/main.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/vendor/backpack/bootstrap-iconpicker/icon-fonts/font-awesome-4.0.0/css/font-awesome.css') }}" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
         (function(){
             var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
             s1.async=true;
-            s1.src='https://embed.tawk.to/5b74e8b9f31d0f771d83d621/default';
+            s1.src='https://embed.tawk.to/5bb327e8b033e9743d01f2e9/default';
             s1.charset='UTF-8';
             s1.setAttribute('crossorigin','*');
             s0.parentNode.insertBefore(s1,s0);
@@ -82,11 +82,17 @@
 <script src="{{ asset('/frontend/js/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('/packages/bootstrap/js/popper.min.js') }}"></script>
 <script src="{{ asset('/packages/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('/frontend/js/lazyload.min.js') }}"></script>
 <script type="text/javascript">
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
+    });
+</script>
+<script type="text/javascript">
+    var myLazyLoad = new LazyLoad({
+        elements_selector: ".lazy"
     });
 </script>
 <script src="{{ asset('/frontend/js/notify.js') }}"></script>

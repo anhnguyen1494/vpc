@@ -10,7 +10,7 @@
                                     <a href="#">Sản phẩm bán chạy</a>|
                                     <a href="#">Sản phẩm khuyến mại</a>|
                                     <a href="#">Sản phẩm mới</a><img style="margin:-4px 0 0 2px;"
-                                                                     src="{{ asset('/frontend/images/new.gif').'?'.time() }}">
+                                                                     class="lazy" data-src="{{ asset('/frontend/images/new.gif').'?'.time() }}">
                                 </div>
                             </div>
                         </div>
@@ -51,6 +51,7 @@
                         <div class="clear"></div>
                         <div class="phone">
                             <a href="tel:{{ $share['settings']['phone'] }}">{{ $share['settings']['phone'] }}</a>
+                            <a href="tel:{{ $share['settings']['phone2'] }}">{{ $share['settings']['phone2'] }}</a>
                         </div>
                     </div>
                 </div>

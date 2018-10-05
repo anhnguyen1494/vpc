@@ -30,8 +30,8 @@
                         @if(is_object($arti->category))
                         <div class="media-left">
                             <a href="{{ route('frontend.article.show', $arti->slug) }}">
-                                <img class="media-object" alt="{{ $arti->title }}" style="width: 70px; height: 70px"
-                                     src="{{ asset('/'.$arti->image).'?'.time() }}">
+                                <img class="media-object lazy" alt="{{ $arti->title }}" style="width: 70px; height: 70px"
+                                     data-src="{{ asset('/'.$arti->image).'?'.time() }}">
                             </a>
                         </div>
                         @endif

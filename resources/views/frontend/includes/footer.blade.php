@@ -35,13 +35,13 @@
                                     <div class="social_us_header">Kết nối với chúng tôi</div>
                                     <div id="f_social">
                                         <a target="_blank" rel="nofollow" href="{{ $share['settings']['facebook'] }}">
-                                            <img src="{{ asset('/frontend/images/f_fb.png').'?'.time() }}">
+                                            <img class="lazy" data-src="{{ asset('/frontend/images/f_fb.png').'?'.time() }}">
                                         </a>
                                         <a target="_blank" rel="nofollow" href="{{ $share['settings']['google'] }}">
-                                            <img src="{{ asset('/frontend/images/f_gplus.png').'?'.time() }}">
+                                            <img class="lazy" data-src="{{ asset('/frontend/images/f_gplus.png').'?'.time() }}">
                                         </a>
                                         <a target="_blank" rel="nofollow" href="{{ $share['settings']['youtube'] }}">
-                                            <img src="{{ asset('/frontend/images/f_yt.png').'?'.time() }}">
+                                            <img class="lazy" data-src="{{ asset('/frontend/images/f_yt.png').'?'.time() }}">
                                         </a>
                                     </div>
                                 </div>
@@ -54,10 +54,10 @@
                                     <table border="0" cellpadding="1" cellspacing="1" style="width: 100%;">
                                         <tbody>
                                         <tr>
-                                            <td><img alt="" src="{{ asset('/frontend/images/tro-giup.png').'?'.time() }}"
+                                            <td><img alt="" class="lazy" data-src="{{ asset('/frontend/images/tro-giup.png').'?'.time() }}"
                                                      style="width: 68px; height: 81px;"></td>
                                             <td style="vertical-align: middle;">
-                                                <p><span style="color:#333333;"><span style="font-size:14px;">Tư vấn bán hàng</span></span>
+                                                <p style="margin-bottom: 0"><span style="color:#333333;"><span style="font-size:14px;">Tư vấn bán hàng</span></span>
                                                 </p>
 
                                                 <p><span style="color:#ba0000;"><a href="tel:{{ $share['settings']['phone'] }}"
@@ -70,20 +70,24 @@
                                                 <hr>
                                                 <span style="color:#555555;"><span style="font-size:13px;"><img
                                                                 alt=""
-                                                                src="{{ asset('/frontend/images/life_saver.png').'?'.time() }}">  Chăm sóc và hỗ trợ sau bán hàng</span></span>
+                                                                class="lazy" data-src="{{ asset('/frontend/images/life_saver.png').'?'.time() }}">  Chăm sóc và hỗ trợ sau bán hàng</span></span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2" style="text-align: center;"><span
-                                                        style="color:#B22222;"><strong><a href="tel:{{ $share['settings']['phone'] }}"
-                                                                                          style="font-size:16px;">{{ $share['settings']['phone'] }}</a></strong></span>
+                                            <td colspan="2">
+                                                <span
+                                                        style="color:#B22222;">
+                                                    <strong><a href="tel:{{ $share['settings']['phone'] }}" style="font-size:16px;">{{ $share['settings']['phone'] }}</a></strong>
+                                                    @if(!empty($share['settings']['phone2'])) - @endif
+                                                    <strong><a href="tel:{{ $share['settings']['phone2'] }}" style="font-size:16px;">{{ $share['settings']['phone2'] }}</a></strong>
+                                                </span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td colspan="2">
                                                 <span style="font-size:13px;">
-                                                    <a href="mail:{{ $share['settings']['email'] }}" style="color:#555555;">
-                                                        <img alt="" src="{{ asset('/frontend/images/mailer.png').'?'.time() }}">
+                                                    <a href="mail:{{ $share['settings']['email'] }}" style="color:#4267b2;">
+                                                        <img alt="" class="lazy" data-src="{{ asset('/frontend/images/mailer.png').'?'.time() }}">
                                                         {{ $share['settings']['email'] }}
                                                     </a>
                                                 </span>
@@ -101,44 +105,46 @@
     </div>
 </div>
 <div class="container-fluid bg-footer">
-    <div class="row">
-        <div class="col-12 offset-xs-0 col-md-10 offset-md-1">
-            <div class="row">
-                <div class="col-md-2 hidden-xs hidden-sm">
-                    <div class="f-logo">
-                        <a href="{{ route('home') }}">
-                            <img title="LẮP ĐẶT CAMERA QUAN SÁT GIÁ RẺ"
-                                 alt="Camera FPT Việt Nam tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
-                                 src="{{ asset('/frontend/images/logo-vanphong.png').'?'.time() }}">
-                        </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-5">
-                                <div class="f-address">
-                                    <p>
-                                <span style="color:#ff6600;">
-                                    <strong>CỬA HÀNG CAMERA DỊCH VỤ TẠI HÀ NỘI</strong></span><span
-                                                style="color:#FF8C00;"><strong> </strong>
-                                </span><br>
-                                        Địa chỉ : <span style="color:#FFD700;">{{ $share['settings']['address'] }}</span><br>
-                                        Điện thoại : <span style="color:#FFD700;">{{ $share['settings']['phone'] }}</span><br>
-                                        Website : <span style="color:#FFD700;">{{ $share['settings']['website'] }}</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-5">
-                                <div class="f-address">
-                                    <p><span style="color:#FF8C00;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
-                                    <p>
-                                        <a href="#">
-                                            <span style="color:#cccccc;">Lắp đặt camera tại Hà Nội</span>
-                                        </a>
-                                    </p>
-                                    <p style="text-align: right;"></p>
-                                </div>
-                            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 offset-xs-0 col-md-12">
+                <div class="row">
+                    <div class="col-md-3 hidden-xs hidden-sm">
+                        <div class="f-logo" style="max-width: 200px">
+                            <a href="{{ route('home') }}">
+                                <img title="LẮP ĐẶT CAMERA QUAN SÁT GIÁ RẺ"
+                                     alt="Camera Văn Phong tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
+                                     class="lazy" data-src="{{ asset('/frontend/images/logo-vanphong.png').'?'.time() }}">
+                            </a>
                         </div>
                     </div>
-                    <div class="clear"></div>
+                    <div class="col-12 col-md-5">
+                        <div class="f-address">
+                            <p>
+                                <span style="color:#ff6600;">
+                                    <strong>CỬA HÀNG CAMERA DỊCH VỤ TẠI HÀ NỘI</strong></span><span
+                                        style="color:#FF8C00;"><strong> </strong>
+                                </span><br>
+                                Địa chỉ : <span style="color:#FFD700;">{{ $share['settings']['address'] }}</span><br>
+                                Điện thoại : <span style="color:#FFD700;">{{ $share['settings']['phone'] }}</span><br>
+                                Website : <span style="color:#FFD700;">{{ $share['settings']['website'] }}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="f-address">
+                            <p><span style="color:#FF8C00;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
+                            <p>
+                                <a href="#">
+                                    <span style="color:#cccccc;">Lắp đặt camera tại Hà Nội</span>
+                                </a>
+                            </p>
+                            <p style="text-align: right;"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

@@ -39,8 +39,7 @@
                                                 <b>{{ $product->options->code_pro }} - {{ $product->name }}</b>
                                             </a>
                                         </td>
-                                        <td><img class="cart_img"
-                                                 src="{{ $product->options->image.'?'.time() }}">
+                                        <td><img class="lazy cart_img" data-src="{{ $product->options->image.'?'.time() }}">
                                         </td>
                                         <td>{{ number_format($product->price) }}</td>
                                         <td style="width:92px;">
@@ -109,8 +108,7 @@
                                         <td colspan="2"><b>HIK-01 - Lắp đặt 1 camera HIKVISION</b></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"><img class="cart_img"
-                                                             src="{{ $product->options->image.'?'.time() }}">
+                                        <td colspan="2"><img class="lazy cart_img" data-src="{{ $product->options->image.'?'.time() }}">
                                         </td>
                                     </tr>
                                     <tr>

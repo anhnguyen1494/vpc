@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'helvatica',sans-serif;
 }
 a{
     text-decoration: none!important;
@@ -46,7 +46,7 @@ a{
 #hotline .name {
     float: right;
     font-size: 16px;
-    color: #f00;
+    color: #4267b2;
 }
 .clear {
     clear: both;
@@ -63,7 +63,7 @@ a{
     display: block;
     font-size: 20px;
     font-weight: bold;
-    color: #f00;
+    color: #4267b2;
     text-align: right;
 }
 #prd-cate-list {

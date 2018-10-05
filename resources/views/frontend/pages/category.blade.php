@@ -78,7 +78,7 @@
                                 <div class="thumbnail products" style="height: 253px;">
                                     <a href="{{ route('product.show', $product->slug) }}">
                                         <img alt="{{ $product->name }}"
-                                             src="{{ asset($product->image).'?'.time() }}">
+                                             class="lazy" data-src="{{ asset($product->image).'?'.time() }}">
                                     </a>
                                     <div class="caption">
                                         <a href="{{ route('product.show', $product->slug) }}">

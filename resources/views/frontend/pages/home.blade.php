@@ -23,6 +23,7 @@
         </div>
         @if(!empty($categories))
             @foreach($categories as $category)
+                @if(count($category->products) > 0)
                 <div class="col-xs-12">
                     <div class="titleCategory">
                         <h4><a href="{{ route('category',$category->slug) }}">{{ $category->name }}</a></h4>
@@ -39,18 +40,22 @@
                                                         <a href="{{ route('product.show', $product->slug) }}">
                                                             <img
                                                                     alt="{{ $product->name }}"
-                                                                    src="{{ asset($product->image).'?'.time() }}">
+                                                                    class="lazy" data-src="{{ asset($product->image).'?'.time() }}">
                                                         </a>
                                                         <div class="caption">
+                                                            <a href="{{ route('product.show', $product->slug) }}" class="trademark">{{ $product->trademark }}</a>
                                                             <a href="{{ route('product.show', $product->slug) }}">
                                                                 <h3>{{ $product->name }}</h3></a>
                                                             <div class="clear"></div>
-                                                            <span class="new-price">{{ number_format($product->price) }} đ</span>
-                                                            <span class="old-price">
-                                                                @if(!empty($product->price_real))
-                                                                {{ number_format($product->price_real) }} đ
-                                                                @endif
-                                                            </span>
+                                                            <div class="container-price">
+                                                                <span class="new-price">{{ number_format($product->price) }} đ</span>
+                                                                <span class="old-price">
+                                                                    @if(!empty($product->price_real))
+                                                                        {{ number_format($product->price_real) }} đ
+                                                                    @endif
+                                                                </span>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -59,16 +64,19 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 hidden-xs hidden-sm" style="padding: 10px 4px;">
+                                    @if(!empty($category->image_right))
                                     <a class="b_a2" href="{{ route('category',$category->slug) }}">
-                                        <img class="image_right"
+                                        <img class="image_right lazy"
                                                 alt="{{ $category->name }}"
-                                                src="{{ asset($category->image_right).'?'.time() }}">
+                                              data-src="{{ asset($category->image_right).'?'.time() }}">
                                     </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endif
             @endforeach
         @endif
     </div>
