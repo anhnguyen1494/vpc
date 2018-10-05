@@ -110,33 +110,33 @@
             <div class="col-12 offset-xs-0 col-md-12">
                 <div class="row">
                     <div class="col-md-3 hidden-xs hidden-sm">
-                        <div class="f-logo" style="max-width: 200px">
+                        <div class="f-logo" style="max-width: 206px;border: 3px solid black">
                             <a href="{{ route('home') }}">
                                 <img title="LẮP ĐẶT CAMERA QUAN SÁT GIÁ RẺ"
                                      alt="Camera Văn Phong tự hào Nhà cung cấp thiết bị camera giám sát giá rẻ uy tín trên toàn quốc"
-                                     class="lazy" data-src="{{ asset('/frontend/images/logo-vanphong.png').'?'.time() }}">
+                                     class="lazy" data-src="{{ asset('/frontend/images/logo-vanphong-bot.png').'?'.time() }}">
                             </a>
                         </div>
                     </div>
                     <div class="col-12 col-md-5">
                         <div class="f-address">
                             <p>
-                                <span style="color:#ff6600;">
+                                <span style="color:black;">
                                     <strong>CỬA HÀNG CAMERA DỊCH VỤ TẠI HÀ NỘI</strong></span><span
                                         style="color:#FF8C00;"><strong> </strong>
                                 </span><br>
-                                Địa chỉ : <span style="color:#FFD700;">{{ $share['settings']['address'] }}</span><br>
-                                Điện thoại : <span style="color:#FFD700;">{{ $share['settings']['phone'] }}</span><br>
-                                Website : <span style="color:#FFD700;">{{ $share['settings']['website'] }}</span>
+                                Địa chỉ : <span style="color:black;">{{ $share['settings']['address'] }}</span><br>
+                                Điện thoại : <span style="color:black;">{{ $share['settings']['phone'] }}</span><br>
+                                Website : <span style="color:black;">{{ $share['settings']['website'] }}</span>
                             </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="f-address">
-                            <p><span style="color:#FF8C00;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
+                            <p><span style="color:black;">Hiện chúng tôi có các điểm dịch vụ như: </span></p>
                             <p>
                                 <a href="#">
-                                    <span style="color:#cccccc;">Lắp đặt camera tại Hà Nội</span>
+                                    <span style="color:black;">Lắp đặt camera tại Hà Nội</span>
                                 </a>
                             </p>
                             <p style="text-align: right;"></p>
@@ -148,3 +148,8 @@
         </div>
     </div>
 </div>
+<div class="col-md-12" style="        text-align: center;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 0;">Copyright © 2018. All Rights Reserved by VanPhongCamera</div>

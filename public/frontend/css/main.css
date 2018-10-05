@@ -327,7 +327,7 @@ img.loader {
     color: #000;
 }
 .bg-footer {
-    background: #404040;
+    background: #fff100;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -340,8 +340,9 @@ img.loader {
     max-width: 200px;
 }
 .f-address {
+    margin-top: 5px;
     font-size: 14px;
-    color: #fff;
+    color: black!important;
 }
 .f-address p {
     line-height: 25px;

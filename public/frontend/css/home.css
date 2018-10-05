@@ -79,19 +79,21 @@
 .container-price{
     text-align: right;
     position: absolute;
-    bottom: 90px;
+    bottom: 77px;
     right: 20px;
+    line-height: normal;
 }
 .trademark{
     color: #4267b2;
     text-transform: uppercase;
-    margin-bottom: 3px;
     font-weight: bold;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: normal;
+    margin-bottom: 3px;
 }
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: block;
@@ -107,16 +109,15 @@
     width: 100%;
 }
 .thumbnail .caption {
-    padding: 9px;
     color: #333;
 }
 .thumbnail .caption {
-    padding: 5px;
-    margin-top: 25px;
+    padding: 5px 15px 5px 5px;
+    margin-top: 29px;
 }
 .thumbnail.products h3 {
-    margin: 0 0 5px 0;
-    font-size: 14px;
+    margin: 0;
+    font-size: 13px;
     color: #000;
     line-height: normal;
     display: block;
@@ -128,7 +129,7 @@
 }
 .thumbnail.products .new-price {
     font-size: 20px;
-    color: #4267b2;
+    color: red;
     font-weight: bold;
     display: block;
     text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 3px 3px 5px #333;

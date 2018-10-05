@@ -47,6 +47,13 @@
                                                             <a href="{{ route('product.show', $product->slug) }}">
                                                                 <h3>{{ $product->name }}</h3></a>
                                                             <div class="clear"></div>
+                                                            <div>
+                                                                @if($product->status == 0)
+                                                                    <span class="badge badge-success">Còn hàng</span>
+                                                                @else
+                                                                    <span class="badge badge-secondary">Hết hàng</span>
+                                                                @endif
+                                                            </div>
                                                             <div class="container-price">
                                                                 <span class="new-price">{{ number_format($product->price) }} đ</span>
                                                                 <span class="old-price">
@@ -55,6 +62,7 @@
                                                                     @endif
                                                                 </span>
                                                             </div>
+
 
                                                         </div>
                                                     </div>
