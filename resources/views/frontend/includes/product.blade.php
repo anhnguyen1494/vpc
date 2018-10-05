@@ -1,7 +1,7 @@
 <div class="col-6 col-sm-4 col-lg-3 product-item">
     <div class="thumbnail products" style="height: 253px;">
         <a href="{{ route('product.show', $product->slug) }}">
-            <img
+            <img style="min-height: 140px"
                     alt="{{ $product->name }}"
                     class="lazy" data-src="{{ asset($product->image).'?'.time() }}">
         </a>
