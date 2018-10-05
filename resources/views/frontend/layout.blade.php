@@ -22,7 +22,7 @@
     @yield('before_styles')
     {{--<link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=vietnamese" rel="stylesheet">--}}
     <link href="{{ asset('/packages/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('/frontend/css/main.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/frontend/css/main.css').'?'.time() }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/vendor/backpack/bootstrap-iconpicker/icon-fonts/font-awesome-4.0.0/css/font-awesome.css') }}" rel="stylesheet" type="text/css"/>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

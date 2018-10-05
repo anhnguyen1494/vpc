@@ -1,7 +1,7 @@
 @extends('frontend.layout')
 
 @section('after_styles')
-    <link href="{{ asset('/frontend/css/home.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/frontend/css/home.css').'?'.time() }}" rel="stylesheet" type="text/css"/>
 @endsection
 
 @section('main')
