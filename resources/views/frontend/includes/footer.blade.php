@@ -104,9 +104,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid bg-footer">
-    <div class="container">
-        <div class="row">
+<div class="container bg-footer">
             <div class="col-12 offset-xs-0 col-md-12">
                 <div class="row">
                     <div class="col-md-3 hidden-xs hidden-sm">
@@ -145,8 +143,6 @@
                 </div>
             </div>
             <div class="clear"></div>
-        </div>
-    </div>
 </div>
 <div class="col-md-12" style="        text-align: center;
         color: #000;
