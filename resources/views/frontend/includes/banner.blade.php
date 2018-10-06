@@ -9,13 +9,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/banner1.jpg').'?'.time() }}" alt="First slide"></a>
+                        <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner1.jpg').'?'.time() }}" alt="First slide"></a>
                     </div>
                     <div class="carousel-item">
-                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/banner2.jpg').'?'.time() }}" alt="Second slide"></a>
+                        <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner2.jpg').'?'.time() }}" alt="Second slide"></a>
                     </div>
                     <div class="carousel-item">
-                        <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/banner3.jpg').'?'.time() }}" alt="Third slide"></a>
+                        <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner3.jpg').'?'.time() }}" alt="Third slide"></a>
                     </div>
                 </div>
                 {{--<a class="carousel-control-prev" href="#slider-left" role="button" data-slide="prev">--}}
@@ -28,8 +28,8 @@
                 {{--</a>--}}
             </div>
             <div class="col-md-4 banner-left">
-                <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/banner4.jpg').'?'.time() }}" alt="" ></a>
-                <a href=""><img class="d-block w-100" src="{{ asset('./frontend/images/slider/banner5.jpg').'?'.time() }}" alt=""></a>
+                <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner4.jpg').'?'.time() }}" alt="" ></a>
+                <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner5.jpg').'?'.time() }}" alt=""></a>
             </div>
         </div>
     </div>
