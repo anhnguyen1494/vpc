@@ -6,7 +6,7 @@
     padding: 0;
 }
 .banner-left{
-    padding: 0;
+    padding: 0 0 0 5px;
 }
 #sub-menu {
     border: 1px solid #4267b2;

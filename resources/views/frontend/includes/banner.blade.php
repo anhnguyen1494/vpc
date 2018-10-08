@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-4 banner-left">
                 <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner4.jpg').'?'.time() }}" alt="" ></a>
-                <a href=""><img class="d-block w-100" src="{{ asset('/frontend/images/slider/banner5.jpg').'?'.time() }}" alt=""></a>
+                <a href=""><img class="d-block w-100" style="margin-top: 5px;max-height: 190px;" src="{{ asset('/frontend/images/slider/banner5.jpg').'?'.time() }}" alt=""></a>
             </div>
         </div>
     </div>
