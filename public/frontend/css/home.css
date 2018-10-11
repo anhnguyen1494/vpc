@@ -5,6 +5,16 @@
 #slider-left{
     padding: 0;
 }
+#slider-left .carousel-indicators li{
+    display: inline-block;
+    width: 10px;
+    height:10px;
+    border-radius: 50%;
+    background: white;
+}
+#slider-left .carousel-indicators li.active{
+    background: red;
+}
 .banner-left{
     padding: 0 0 0 5px;
 }

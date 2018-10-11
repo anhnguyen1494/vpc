@@ -47,6 +47,8 @@
     font-size: 20px;
     font-weight: bold;
     color: #4267b2;
+    font-style: italic;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 3px 3px 5px #333;
 }
 .prd-desc .detail-stock {
     font-weight: bold;

@@ -127,7 +127,7 @@ p{
 }
 #prd-cate-list ul li a {
     display: block;
-    padding: 14px 5px;
+    padding: 11px 5px;
     margin: 0 10px;
 }
 #prd-cate-list .sub-page > ul > li > a {
@@ -137,7 +137,7 @@ p{
 }
 #prd-cate-list .sub-page > ul > li > a img {
     float: left;
-    margin: -5px 15px 0 0;
+    margin: 0 15px 0 0;
 }
 #prd-cate-list ul li a .mc_title {
     font-size: 16px;
@@ -146,7 +146,7 @@ p{
     display: block;
 }
 #prd-cate-list .sub-page > ul > li > a .mc_title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 #prd-cate-list .sub-page > ul > li > a i, #prd-cate-list .main-page > ul > li > a i {
@@ -474,6 +474,17 @@ img.loader {
 .thumbnail > img, .thumbnail a > img {
     margin-right: auto;
     margin-left: auto;
+}
+.thumbnail.products .type-discount{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    background: url(/frontend/images/type-discount.png) no-repeat scroll center center transparent;
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    font: bold 13px/45px Arial;
+    text-align: center;
 }
 .thumbnail.products img {
     max-width: 140px;

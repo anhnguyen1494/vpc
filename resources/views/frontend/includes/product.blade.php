@@ -1,5 +1,10 @@
 <div class="col-6 col-sm-4 col-lg-3 product-item">
     <div class="thumbnail products" style="height: 253px;">
+        @if(!empty($product->price_real))
+        <p class="type-discount">
+            -{{ round(100-($product->price/$product->price_real)*100) }}%
+        </p>
+        @endif
         <a href="{{ route('product.show', $product->slug) }}">
             <img style="min-height: 140px"
                     alt="{{ $product->name }}"

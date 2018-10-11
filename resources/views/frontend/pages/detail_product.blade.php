@@ -35,7 +35,11 @@
                             <p>Thương hiệu: <a href="#">{{ $product->trademark }}</a></p>
                             <p>Giá thị trường: <span class="detail-oldprice">{{ number_format($product->price_real) }}
                                     đ</span></p>
-                            <p>Giá bán: <span class="detail-price">{{ number_format($product->price) }} đ</span></p>
+                            <p>Giá bán: <span class="detail-price">{{ number_format($product->price) }} đ</span>
+                                @if(!empty($product->price_real))
+                                    <span class="badge badge-danger ml-1">-{{ round(100-($product->price/$product->price_real)*100) }}%</span>
+                                @endif
+                            </p>
                             <p>Tình trạng: <span class="detail-stock">{{ $product->status == 0 ? 'Còn' : 'Hết' }}
                                     hàng</span></p>
                             <p>Bảo hành: <span class="detail-stock">{{ $product->guarantee }} Tháng</span></p>

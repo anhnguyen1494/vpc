@@ -117,7 +117,7 @@ class ProductCrudController extends CrudController
         $this->crud->addField([   // Number
             'name'  => 'price',
             'label' => 'Giá bán (*)',
-            'type'  => 'number',
+            'type'  => 'price',
             // optionals
 //             'attributes' => ["step" => "any"], // allow decimals
             'attributes' => ["placeholder" => "Giá khuyến mãi"],
@@ -132,7 +132,7 @@ class ProductCrudController extends CrudController
         $this->crud->addField([   // Number
             'name'  => 'price_real',
             'label' => 'Giá thị trường',
-            'type'  => 'number',
+            'type'  => 'price',
             // optionals
              'attributes' => ["placeholder" => "Giá chưa khuyến mãi"], // allow decimals
             'prefix' => 'VNĐ',
