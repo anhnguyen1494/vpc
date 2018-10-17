@@ -34,7 +34,7 @@
                                 <div class="col-12 col-lg-9">
                                     <div class="row prod-container">
                                         @if(!empty($category->products))
-                                            @php($products = $category->products()->orderBy('order')->get())
+                                            @php($products = $category->products()->orderBy('order')->take(8)->get())
                                             @foreach($products as $product)
                                                 @include('frontend.includes.product')
                                             @endforeach

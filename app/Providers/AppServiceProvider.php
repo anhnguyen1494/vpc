@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $categorys = Category::with('products')->orderBy('order')->get();
+        $categorys = Category::with('products')->orderBy('order')->take(8)->get();
         $sets = Setting::all();
         $settings = [];
         foreach ($sets as $setting){
