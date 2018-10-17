@@ -27,7 +27,7 @@ class Product extends Model implements Buyable
     // protected $guarded = ['id'];
     protected $fillable = ['name', 'image', 'details','promotion','trademark',
         'price', 'price_real', 'category_id','code_pro','specification','slug',
-        'guarantee','status','meta_title','meta_description','meta_keywords'
+        'guarantee','status','meta_title','meta_description','meta_keywords','order'
     ];
     // protected $hidden = [];
     // protected $dates = [];

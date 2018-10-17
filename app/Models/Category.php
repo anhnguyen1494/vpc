@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends \Backpack\NewsCRUD\app\Models\Category
 {
-    protected $fillable = ['name', 'slug', 'parent_id','image','image_right'];
+    protected $fillable = ['name', 'slug', 'parent_id','image','image_right','order'];
 
     public function products()
     {

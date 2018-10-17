@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     public function index(){
-        $categories = Category::with('products')->get();
+        $categories = Category::with('products')->orderBy('order')->get();
         $pages = Page::all();
         return view('frontend.pages.home',compact('categories','pages'));
     }

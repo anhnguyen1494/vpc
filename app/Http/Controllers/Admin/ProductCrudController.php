@@ -150,9 +150,22 @@ class ProductCrudController extends CrudController
                 0 => 'Còn hàng',
                 1 => 'Hết hàng',
             ],
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6'
+            ],
             // optional
             'inline' => true, // show the radios all on the same line?
             'tab'    => 'Thông tin cơ bản',
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'order',
+            'label' => 'Vị trí',
+            'type' => 'number',
+            'attributes' => ["placeholder" => "Vị trí"],
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6'
+            ],
+            'tab' => 'Thông tin cơ bản',
         ]);
 
         $this->crud->addField([   // Wysiwyg
@@ -241,6 +254,10 @@ class ProductCrudController extends CrudController
                 'label' => 'Tên',
                 'name'  => 'name'
             ],
+        ]);
+        $this->crud->addColumn([
+            'label' => 'Vị Trí',
+            'name' => 'order',
         ]);
         $this->crud->addColumn([
             'label'     => 'Ảnh', // Table column heading

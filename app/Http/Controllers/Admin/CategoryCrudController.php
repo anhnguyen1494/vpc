@@ -57,12 +57,8 @@ class CategoryCrudController extends \Backpack\NewsCRUD\app\Http\Controllers\Adm
             'max-height' => 'auto'
         ]);
         $this->crud->addColumn([
-            'label' => 'Parent',
-            'type' => 'select',
-            'name' => 'parent_id',
-            'entity' => 'parent',
-            'attribute' => 'name',
-            'model' => "App\Models\Category",
+            'label' => 'Vị Trí',
+            'name' => 'order',
         ]);
 
         // ------ CRUD FIELDS
@@ -76,6 +72,12 @@ class CategoryCrudController extends \Backpack\NewsCRUD\app\Http\Controllers\Adm
             'type' => 'text',
             'hint' => 'Will be automatically generated from your name, if left empty.',
             // 'disabled' => 'disabled'
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'order',
+            'label' => 'Vị trí (*)',
+            'type' => 'number',
+            'attributes' => ["placeholder" => "Vị trí"],
         ]);
         $this->crud->addField([    // Image
             'name' => 'image',
