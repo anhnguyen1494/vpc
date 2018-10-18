@@ -5,7 +5,7 @@
     <meta property="og:title" content="{{ empty($product->meta_title) ? $product->name : $product->meta_title }}"/>
     <meta property="og:image" content="{{ asset($product->image) }}"/>
     <meta name="description"
-          content="{{ empty($product->meta_description) ? 'Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.' : $product->meta_title }}">
+          content="@if(empty($product->meta_description)) {!! $product->details !!} @else {{ $product->meta_title }} @endif">
     <meta name="keywords" content="{{ empty($product->meta_keywords) ? $product->name : $product->meta_keywords }}">
     <meta content="robots" content="index,follow">
 @endsection
