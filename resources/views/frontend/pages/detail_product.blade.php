@@ -1,5 +1,15 @@
 @extends('frontend.layout')
 
+@section('meta')
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ !empty($product->meta_title) ? $product->name : $product->meta_title }}"/>
+    <meta property="og:image" content="{{ asset($product->image) }}"/>
+    <meta name="description"
+          content="{{ !empty($product->meta_title) ? 'Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.' : $product->meta_title }}">
+    <meta name="keywords" content="{{ !empty($product->meta_title) ? $product->name : $product->meta_keywords }}">
+    <meta content="robots" content="index,follow">
+@endsection
+
 @section('after_styles')
     <link href="{{ asset('/frontend/css/product.css') }}" rel="stylesheet" type="text/css"/>
 @endsection
@@ -37,7 +47,8 @@
                                     đ</span></p>
                             <p>Giá bán: <span class="detail-price">{{ number_format($product->price) }} đ</span>
                                 @if(!empty($product->price_real))
-                                    <span class="badge badge-danger ml-1">-{{ round(100-($product->price/$product->price_real)*100) }}%</span>
+                                    <span class="badge badge-danger ml-1">-{{ round(100-($product->price/$product->price_real)*100) }}
+                                        %</span>
                                 @endif
                             </p>
                             <p>Tình trạng: <span class="detail-stock">{{ $product->status == 0 ? 'Còn' : 'Hết' }}
@@ -94,8 +105,9 @@
                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
                                role="tab" aria-controls="nav-profile" aria-selected="false">Thông số kĩ thuật</a>
                             @if(!empty($product->promotion))
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
-                               role="tab" aria-controls="nav-contact" aria-selected="false">Chương trình khuyến mãi</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                   role="tab" aria-controls="nav-contact" aria-selected="false">Chương trình khuyến
+                                    mãi</a>
                             @endif
                         </div>
                     </nav>
@@ -108,9 +120,10 @@
                             {!! $product->specification !!}
                         </div>
                         @if(!empty($product->promotion))
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                            {!! $product->promotion !!}
-                        </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                 aria-labelledby="nav-contact-tab">
+                                {!! $product->promotion !!}
+                            </div>
                         @endif
                     </div>
                 </div>
@@ -151,11 +164,11 @@
                     $('.cart_qty').val(--cart_qty);
                 }
             });
-            $('.buy_now').click(function(){
-                $('.addcart').attr('action',"{{ route('product.buynow') }}");
+            $('.buy_now').click(function () {
+                $('.addcart').attr('action', "{{ route('product.buynow') }}");
             });
-            $('.cart_submit').click(function(){
-                $('.addcart').attr('action',"{{ route('product.addcart') }}");
+            $('.cart_submit').click(function () {
+                $('.addcart').attr('action', "{{ route('product.addcart') }}");
             });
         });
     </script>
