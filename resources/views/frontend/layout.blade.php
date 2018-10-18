@@ -8,6 +8,7 @@
     <link href="{{ asset('/frontend/images/icon.png') }}" rel="shortcut icon" type="image/png"/>
     <meta name="description" content="Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.">
     <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="{{ url()->current() }}" />
     <title>
         @hasSection('title')
             @yield('title') | Văn Phong Camera

@@ -4,7 +4,7 @@
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ empty($product->meta_title) ? $product->name : $product->meta_title }}"/>
     <meta property="og:image" content="{{ asset($product->image) }}"/>
-    <meta name="description"
+    <meta name="og:description"
           content="@if(empty($product->meta_description)) {!! $product->details !!} @else {{ $product->meta_title }} @endif">
     <meta name="keywords" content="{{ empty($product->meta_keywords) ? $product->name : $product->meta_keywords }}">
     <meta content="robots" content="index,follow">
