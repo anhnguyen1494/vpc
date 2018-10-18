@@ -5,7 +5,7 @@
     <meta property="og:title" content="{{ empty($product->meta_title) ? $product->name : $product->meta_title }}"/>
     <meta property="og:image" content="{{ asset($product->image) }}"/>
     <meta name="og:description"
-          content="{{ empty($product->meta_description) ? 'Giá bán: '.$product->price.' - Thương hiệu: '.$product->trademark.' - Bảo hành: '.$product->guarantee.' - '.$product->name : $product->meta_description }}">
+          content="{{ empty($product->meta_description) ? 'Giá bán: '.number_format($product->price).' VNĐ - Thương hiệu: '.$product->trademark.' - Bảo hành: '.$product->guarantee.' - '.$product->name : $product->meta_description }}">
     <meta name="keywords" content="{{ empty($product->meta_keywords) ? $product->name.',phan phoi camera, lap dat camera,Camera,camera ip,camera quan sat,tong dai,tong dai noi bo,pabx,bao trom,thiet bi kiem soat cua,bo dam,chuong cua man hinh,bao chay,may fax,cap quang,cap mang,router,switch,wireless' : $product->meta_keywords }}">
     <meta content="robots" content="index,follow">
 @endsection
