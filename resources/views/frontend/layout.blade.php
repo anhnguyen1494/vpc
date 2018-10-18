@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('/frontend/images/icon.png') }}" rel="shortcut icon" type="image/png"/>
-    <meta name="description" content="Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.">
+    <meta name="description" content="Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc, giao hàng tận nơi, hướng dẫn tận tình">
+    <meta name="keywords" content="phan phoi camera, lap dat camera,Camera,camera ip,camera quan sat,tong dai,tong dai noi bo,pabx,bao trom,thiet bi kiem soat cua,bo dam,chuong cua man hinh,bao chay,may fax,cap quang,cap mang,router,switch,wireless">
     <meta property="fb:app_id" content="" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <title>
