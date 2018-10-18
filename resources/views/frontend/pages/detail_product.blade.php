@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-5">
-                        <div class="prd-desc equalheight1" style="height: 313px;">
+                        <div class="prd-desc equalheight1" style="min-height: 313px;">
                             <h1 class="header2">
                                 {{ $product->name }}</h1>
                             <div class="clear"></div>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="mb-content-product">
             <div class="col-xs-12 col-md-9">
                 <div class="">
                     <nav>

@@ -49,6 +49,7 @@
     @include('frontend.includes.footer')
 </div>
 @include('frontend.includes.contact_right')
+@include('frontend.includes.phone_bottom')
 @include ('frontend.includes.partials.params')
 <div class="modal fade" id="supportonlineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
