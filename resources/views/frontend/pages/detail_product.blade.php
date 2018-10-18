@@ -1,4 +1,7 @@
 @extends('frontend.layout')
+@section('title')
+    {{ $product->name }}
+@endsection
 
 @section('meta')
     <meta property="og:type" content="article"/>
