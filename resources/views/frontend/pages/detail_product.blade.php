@@ -5,7 +5,7 @@
     <meta property="og:title" content="{{ empty($product->meta_title) ? $product->name : $product->meta_title }}"/>
     <meta property="og:image" content="{{ asset($product->image) }}"/>
     <meta name="og:description"
-          content="{{ empty($product->meta_description) ? $product->name.' - Giá bán: '.$product->price.' - Thương hiệu: '.$product->trademark.' - Bảo hành: '.$product->guarantee : $product->meta_description }}">
+          content="{{ empty($product->meta_description) ? 'Giá bán: '.$product->price.' - Thương hiệu: '.$product->trademark.' - Bảo hành: '.$product->guarantee.' - '.$product->name : $product->meta_description }}">
     <meta name="keywords" content="{{ empty($product->meta_keywords) ? $product->name : $product->meta_keywords }}">
     <meta content="robots" content="index,follow">
 @endsection
