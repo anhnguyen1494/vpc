@@ -32,7 +32,7 @@ Route::group(['namespace' => 'Frontend'],function(){
     Route::post('searchAjax',['as' => 'search-ajax', 'uses' => 'ProductController@searchAjax']);
 
     Route::get('dat-hang-thanh-cong',['as' => 'order.success', 'uses' => 'OrderController@orderSuccess']);
-//    Route::get('tin-tuc',['as' => 'frontend.article', 'uses' => 'ArticleController@index']);
-//    Route::get('tin-tuc/{slug_article}',['as' => 'frontend.article.show', 'uses' => 'ArticleController@show']);
+    Route::get('tin-tuc',['as' => 'frontend.article', 'uses' => 'ArticleController@index']);
+    Route::get('tin-tuc/{slug_article}',['as' => 'frontend.article.show', 'uses' => 'ArticleController@show']);
     Route::get('page/{slug_article}',['as' => 'frontend.page.show', 'uses' => 'PageController@show']);
 });

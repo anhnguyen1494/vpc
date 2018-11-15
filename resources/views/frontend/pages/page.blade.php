@@ -31,23 +31,23 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-3">
-                <span class="header3">Các bài viết khác</span>
+                <span class="header3">Các thông tin khác</span>
                 @foreach($articles as $arti)
                     <div class="media products">
                         @if(is_object($arti->category))
-                        <div class="media-left">
-                            <a href="{{ route('frontend.article.show', $arti->slug) }}">
-                                <img class="media-object lazy" alt="{{ $arti->title }}" style="width: 70px; height: 70px"
-                                     data-src="{{ asset('/'.$arti->image).'?'.time() }}">
-                            </a>
-                        </div>
+                            <div class="media-left">
+                                <a href="{{ route('frontend.page.show', $arti->slug) }}">
+                                    <img class="media-object lazy" alt="{{ $arti->title }}" style="width: 70px; height: 70px"
+                                         data-src="{{ asset('/'.$arti->image).'?'.time() }}">
+                                </a>
+                            </div>
                         @endif
                         <div class="media-body">
-                            <a href="{{ route('frontend.article.show', $arti->slug) }}">
+                            <a href="{{ route('frontend.page.show', $arti->slug) }}">
                                 <h4 class="media-heading" @if(!is_object($arti->category)) style="color: #4267b2" @endif>{{ $arti->title }}</h4>
                             </a>
                             @if(is_object($arti->category))
-                            <span class="media-price">{{ $arti->category->name }}</span>
+                                <span class="media-price">{{ $arti->category->name }}</span>
                             @endif
                         </div>
                     </div>

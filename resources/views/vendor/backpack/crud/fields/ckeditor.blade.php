@@ -38,7 +38,7 @@
     jQuery(document).ready(function($) {
         $('#ckeditor-{{ $field['name'] }}').ckeditor({
             "filebrowserBrowseUrl": "{{ url(config('backpack.base.route_prefix').'/elfinder/ckeditor') }}",
-            "extraPlugins" : '{{ isset($field['extra_plugins']) ? implode(',', $field['extra_plugins']) : 'oembed,widget' }}'
+            "extraPlugins" : '{{ isset($field['extra_plugins']) ? implode(',', $field['extra_plugins']) : 'oembed,widget,colorbutton,justify' }}'
         });
     });
 </script>

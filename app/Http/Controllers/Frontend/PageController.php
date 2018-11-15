@@ -11,6 +11,6 @@ class PageController extends Controller
     public function show(Request $request, $slug_article){
         $article = Page::where('slug',$slug_article)->first();
         $articles = Page::where('slug','!=',$slug_article)->get();
-        return view('frontend.pages.blog',compact('article','articles'));
+        return view('frontend.pages.page',compact('article','articles'));
     }
 }

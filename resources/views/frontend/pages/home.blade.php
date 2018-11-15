@@ -4,8 +4,7 @@
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Công ty Văn Phong Camera cung cấp camera uy tín, chất lượng"/>
     <meta property="og:image" content="{{ asset('/frontend/images/logo-vpc.png') }}"/>
-    <meta name="og:description" content="Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.">
-    <meta content="robots" content="index,follow">
+    <meta property="og:description" content="Công ty Văn Phong Camera cung cấp lắp đặt camera quan sát, lắp camera chống trộm cho gia đình, camera giám sát cửa hàng… lắp camera giá rẻ, uy tín toàn quốc.">
 @endsection
 
 @section('after_styles')
