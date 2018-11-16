@@ -604,6 +604,7 @@ img.loader {
     #topcontrol{
         bottom: 20px!important;
         left: 15px!important;
+        max-width: 48px!important;
     }
     .container {
         padding-right: 5px;
