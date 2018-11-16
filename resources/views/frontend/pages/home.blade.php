@@ -23,6 +23,7 @@
                             @foreach($pages as $page)
                             <a href="{{ route('frontend.page.show',$page->slug) }}">{{ $page->title }}</a>
                             @endforeach
+                            <a href="{{ route('frontend.category','tin-camera') }}">TIN CAMERA</a>
                         </div>
                     </div>
                 </div>

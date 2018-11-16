@@ -14,6 +14,19 @@
 @section('main')
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <div id="ScrollTo2" class="article_header my-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="/">Trang chủ</a></li>
+                        <li>
+                            <a href="{{ route('frontend.category',$cate->slug) }}">{{ $cate->name }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('frontend.article.show',['slug_cate' => $cate->slug, 'slug_article' => $article->slug ]) }}">{{ $article->title }}</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
             <div class="col-xs-12 col-md-9">
                 <div class="">
                     <nav>
@@ -36,14 +49,14 @@
                     <div class="media products">
                         @if(is_object($arti->category))
                         <div class="media-left">
-                            <a href="{{ route('frontend.article.show', $arti->slug) }}">
+                            <a href="{{ route('frontend.article.show', ['slug_cate' => $cate->slug, 'slug_article' => $arti->slug]) }}">
                                 <img class="media-object lazy" alt="{{ $arti->title }}" style="width: 70px; height: 70px"
                                      data-src="{{ asset('/'.$arti->image).'?'.time() }}">
                             </a>
                         </div>
                         @endif
                         <div class="media-body">
-                            <a href="{{ route('frontend.article.show', $arti->slug) }}">
+                            <a href="{{ route('frontend.article.show', ['slug_cate' => $cate->slug, 'slug_article' => $arti->slug]) }}">
                                 <h4 class="media-heading" @if(!is_object($arti->category)) style="color: #4267b2" @endif>{{ $arti->title }}</h4>
                             </a>
                             @if(is_object($arti->category))

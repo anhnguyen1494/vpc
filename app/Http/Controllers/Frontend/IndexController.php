@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Category;
+use App\Models\CategoryBlog;
 use App\Models\Product;
 use Backpack\PageManager\app\Models\Page;
 use Backpack\Settings\app\Models\Setting;
@@ -13,7 +14,7 @@ class IndexController extends Controller
 {
     public function index(){
         $categories = Category::with('products')->orderBy('order')->get();
-        $pages = Page::all();
+        $pages = Page::take(4)->get();
         return view('frontend.pages.home',compact('categories','pages'));
     }
 }

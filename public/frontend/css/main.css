@@ -300,6 +300,13 @@ img.loader {
     text-transform: uppercase;
     color: #333;
 }
+.social-claim2 .claim_header a{
+    color: #333;
+}
+.social-claim2 .claim_header a:hover{
+    color: blue;
+}
+
 .social-claim2 ul {
     list-style: url(../../frontend/images/list-style.png) inside;
 }

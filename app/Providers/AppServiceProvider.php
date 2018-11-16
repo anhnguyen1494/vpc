@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\CategoryBlog;
 use Backpack\Settings\app\Models\Setting;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -18,13 +19,17 @@ class AppServiceProvider extends ServiceProvider
     {
         $categorys = Category::with('products')->orderBy('order')->take(8)->get();
         $sets = Setting::all();
+        $cate_ho_tro = CategoryBlog::with('articles')->where('slug','ho-tro')->first();
+        $cate_thong_tin = CategoryBlog::with('articles')->where('slug','thong-tin')->first();
         $settings = [];
         foreach ($sets as $setting){
             $settings[$setting->key] = $setting->value;
         }
         $share = [
             'categorys' => $categorys,
-            'settings' => $settings
+            'settings' => $settings,
+            'cate_ho_tro' => $cate_ho_tro,
+            'cate_thong_tin' => $cate_thong_tin,
         ];
         View::share('share', $share);
     }

@@ -80,7 +80,6 @@ class ArticleCrudController extends \Backpack\NewsCRUD\app\Http\Controllers\Admi
             'label' => 'Date',
             'type' => 'date',
         ], 'update');
-
         $this->crud->addField([    // WYSIWYG
             'name' => 'content',
             'label' => 'Content',
@@ -118,6 +117,12 @@ class ArticleCrudController extends \Backpack\NewsCRUD\app\Http\Controllers\Admi
             'name' => 'featured',
             'label' => 'Featured item',
             'type' => 'checkbox',
+        ]);
+        $this->crud->addField([   // Textarea
+            'name'  => 'desc_short',
+            'label' => 'Mô tả ngắn',
+            'type'  => 'textarea',
+            'placeholder' => 'Nhập mô tả ngắn để hiển thị thông tin ngắn',
         ]);
 
         $this->crud->enableAjaxTable();

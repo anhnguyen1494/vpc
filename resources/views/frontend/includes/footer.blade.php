@@ -14,22 +14,31 @@
                         </div>
                         <div class="col-12 col-md-4 col-lg-3">
                             <div class="social-claim2">
-                                <div class="claim_header">Hỗ trợ khách hàng</div>
+                                <div class="claim_header"><a href="{{ route('frontend.category','ho-tro') }}">Hỗ trợ khách hàng</a></div>
                                 <ul>
-                                    <li><a href="#">Xem camera giám sát qua điện thoại</a></li>
-                                    <li><a href="#">Xem camera quan sát qua máy tính</a></li>
-                                    <li><a href="#">Download tài liệu</a></li>
-                                    <li><a href="#">HD cài đặt phần mềm Teamviewer</a></li>
+                                    @php( $arti_hts = $share['cate_ho_tro']->articles()->take(4)->get())
+                                    @foreach($arti_hts as $arti_ht)
+                                    <li>
+                                        <a href="{{ route('frontend.article.show', ['slug_cate' => $share['cate_ho_tro']->slug, 'slug_article' => $arti_ht->slug]) }}">
+                                            {{ $arti_ht->title }}
+                                        </a>
+                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 col-lg-3">
                             <div class="social-claim2">
-                                <div class="claim_header">Thông tin công ty</div>
+                                <div class="claim_header"><a href="{{ route('frontend.category','ho-tro') }}">Thông tin công ty</a></div>
                                 <ul>
-                                    <li><a href="#">Giới thiệu</a></li>
-                                    <li><a href="#">Tuyển dụng</a></li>
-                                    <li><a href="#">Chính sách</a></li>
+                                    @php( $arti_tts = $share['cate_thong_tin']->articles()->take(4)->get())
+                                        @foreach($arti_tts as $arti_tt)
+                                            <li>
+                                                <a href="{{ route('frontend.article.show', ['slug_cate' => $share['cate_thong_tin']->slug, 'slug_article' => $arti_tt->slug]) }}">
+                                                    {{ $arti_tt->title }}
+                                                </a>
+                                            </li>
+                                        @endforeach
                                 </ul>
                                 <div id="social_us">
                                     <div class="social_us_header">Kết nối với chúng tôi</div>
