@@ -12,4 +12,8 @@ class Category extends \Backpack\NewsCRUD\app\Models\Category
     {
         return $this->hasMany(Product::class, 'category_id');
     }
+    public function getChild(){
+        $childs = self::where('parent_id',$this->id)->orderBy('order')->get();
+        return $childs;
+    }
 }

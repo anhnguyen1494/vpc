@@ -151,11 +151,49 @@ p{
 }
 #prd-cate-list .sub-page > ul > li > a i, #prd-cate-list .main-page > ul > li > a i {
     float: right;
-    line-height: 21px;
+    line-height: 25px;
     font-size: 14px;
 }
 #prd-cate-list ul li a:hover .mc_title, #prd-cate-list ul li a:hover .mc_desc {
     color: #eb1c24;
+}
+#prd-cate-list .sub-page > ul > li > ul {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background: #efefef;
+    left: 100%;
+    top: 0;
+    border: 1px solid #e8e8e8;
+    z-index: 1000;
+    width: 210%;
+    height: 100%;
+}
+#prd-cate-list .sub-page > ul > li > ul > li {
+    position: relative;
+    width: 33%;
+    display: block;
+    float: left;
+}
+#prd-cate-list .sub-page > ul > li > ul > li > a {
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+    padding: 10px;
+    z-index: 101;
+}
+#prd-cate-list .sub-page > ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#prd-cate-list ul li:hover > .menu-91{
+    display: block;
 }
 /*search*/
 #searchform {

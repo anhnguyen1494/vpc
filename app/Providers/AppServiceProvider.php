@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $categorys = Category::with('products')->orderBy('order')->take(8)->get();
+        $categorys = Category::with('products')->where('parent_id', null)->orderBy('order')->take(8)->get();
         $sets = Setting::all();
         $cate_ho_tro = CategoryBlog::with('articles')->where('slug','ho-tro')->first();
         $cate_thong_tin = CategoryBlog::with('articles')->where('slug','thong-tin')->first();
